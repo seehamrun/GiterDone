@@ -5,6 +5,6 @@ import os
 
 
 app = webapp2.WSGIApplication([
-    ('/add_favorite', AddFavoriteHandler),
-    ('/list_favorites', ListFavoritesHandler)
+    ('/schedule', ScheduleHandler),
+    ('/history', ListFavoritesHandler)
 ], debug=True)
