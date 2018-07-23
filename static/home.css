@@ -1,5 +1,7 @@
 .logout {
   float: right;
+  font-family: impact;
+  color: turquoise;
 }
 
 #app_name {
@@ -15,6 +17,7 @@
   text-align: center;
   font-family: impact;
   margin: 20px;
+  color: turquoise;
 }
 
 #home {
@@ -77,12 +80,14 @@
   font-family: impact;
 }
 
-.container {
-  display: grid
-}
-
 .wrapper {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 2fr;
   grid-template-rows: 2fr
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr;
 }

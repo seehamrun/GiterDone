@@ -39,6 +39,7 @@ class HistoryHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/history.html')
         return self.response.write(template.render())
 
+
 class SettingsHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/settings.html')
