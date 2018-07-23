@@ -8,26 +8,31 @@
 
 .home {
   background-color: turquoise;
-  border: blue;
-  border-radius: 2px;
+  border: white;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .schedule {
   background-color: turquoise;
   border: white;
-  border-radius: 2px;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .history {
   background-color: turquoise;
   border: white;
-  border-radius: 2px;
+  border-radius: 10px;
+  margin: 5px;
+  font-style: bold
 }
 
 .settings {
   background-color: turquoise;
   border: white;
-  border-radius: 2px;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .container {
