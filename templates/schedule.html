@@ -26,8 +26,8 @@
       </div>
     </div>
     <form action="/script.js" method="get">
-      {% for num in range({{amtOfTimes}}) %}
-        <input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br>
+      {% for num in range amtOfTimes %}
+        <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br></div>
       {% endfor %}
     </form>
       <p> The weather is</p>
