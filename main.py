@@ -29,5 +29,5 @@ class IndexHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', IndexHandler),
     ('/schedule', ScheduleHandler),
-    ('/history', ListFavoritesHandler)
+    ('/history', HistoryHandler)
 ], debug=True)
