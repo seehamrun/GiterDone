@@ -3,6 +3,12 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /static.*
+  static_dir: static
+  login: required
+- url: /.*
+  script: main.app
+  login: required
 - url: /
   static_files: static/index.html
   upload: static/index.html
@@ -10,6 +16,7 @@ handlers:
   static_dir: static
 - url: /.*
   script: main.app
+
 
 libraries:
 - name: jinja2
