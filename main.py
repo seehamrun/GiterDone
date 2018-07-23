@@ -45,6 +45,6 @@ class SettingsHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', IndexHandler),
     ('/schedule', ScheduleHandler),
-    ('/history', HistoryHandler)
+    ('/history', HistoryHandler),
     ('/Settings', SettingsHandler)
 ], debug=True)
