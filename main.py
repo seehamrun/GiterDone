@@ -2,11 +2,14 @@ import webapp2
 import logging
 import jinja2
 import os
-
+from google.appengine.ext import ndb
 from google.appengine.api import users
 
 
-
+class DatabaseForCoolPeople(ndb.Model):
+    name = ndb.StringProperty()
+    AMtOfWater = ndb.IntegerProperty()
+    date = ndb.StringProperty()
 
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
