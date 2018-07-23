@@ -10,7 +10,7 @@ class DatabaseForCoolPeople(ndb.Model):
     name = ndb.StringProperty()
     amtOfWater = ndb.IntegerProperty()
     date = ndb.StringProperty()
-    
+
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
@@ -20,7 +20,7 @@ class IndexHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
         logging.info('current user is %s' % (user.nickname()))
-        template = jinja_env.get_template('templates/index.html')
+        template = jinja_env.get_template('templates/home.html')
         data = {
         'user_nickname': user.nickname(),
           'logoutUrl': users.create_logout_url('/')
