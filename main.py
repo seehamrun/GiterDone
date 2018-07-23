@@ -8,7 +8,7 @@ from google.appengine.api import users
 
 class DatabaseForCoolPeople(ndb.Model):
     name = ndb.StringProperty()
-    AMtOfWater = ndb.IntegerProperty()
+    amtOfWater = ndb.IntegerProperty()
     date = ndb.StringProperty()
 
 class IndexHandler(webapp2.RequestHandler):
