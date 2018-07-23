@@ -7,13 +7,13 @@ from google.appengine.ext import ndb
 from google.appengine.api import users
 from google.appengine.api import urlfetch
 
-class Water:
+class amtOfTimes:
      def __init__(name, totalWater, date, incWater):
          self.name = name
          self.totalWater = totalWater
          self.date = date
          self.incWater = incWater
-         
+
 class WaterDatabase(ndb.Model):
     name = ndb.StringProperty()
     totalWater = ndb.IntegerProperty()
