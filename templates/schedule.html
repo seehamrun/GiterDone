@@ -25,16 +25,15 @@
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
     </div>
-    <p> The weather is </p>
     <form action="/script.js" method="get">
       {% for num in range({{amtOfTimes}}) %}
         <input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br>
       {% endfor %}
     </form>
-  <p> The weather is</p>
-    <div id="temp"></div>
-    <div id="condition"></div>
-    <div id="pic"></div>
+      <p> The weather is</p>
+        <div id="temp"></div>
+        <div id="condition"></div>
+        <div id="pic"></div>
   </body>
 
 
