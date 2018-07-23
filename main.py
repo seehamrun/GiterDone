@@ -6,5 +6,5 @@ import os
 
 app = webapp2.WSGIApplication([
     ('/schedule', ScheduleHandler),
-    ('/history', ListFavoritesHandler)
+    ('/history', HistoryHandler)
 ], debug=True)
