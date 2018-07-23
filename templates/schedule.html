@@ -2,7 +2,9 @@
 
   <head>
     <title>Schedule</title>
-    <link rel="stylesheet" href="/static/schedule.css"></link>
+      <link rel="stylesheet" href="schedule.css"></link>
+      <script src= "../script.js"></script>
+      <script src= "api.js"></script>
   </head>
 
   <body>
@@ -23,13 +25,16 @@
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
     </div>
-    <p> The weather is WEATHER API</p>
     <form action="/script.js" method="get">
-      <input type="checkbox" name="amt" value = 16> I have drank 16oz by %s%s<br>
-      <input type="checkbox" name="amt" value= 16 > I have a car<br>
-      <input type="submit" value="Update">
+      {% for num in range({{amtOfTimes}}) %}
+        <input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br>
+      {% endfor %}
     </form>
-  <p> The weather is</p>
+      <p> The weather is</p>
+        <div id="temp"></div>
+        <div id="condition"></div>
+        <div id="pic"></div>
   </body>
+
 
 </html>

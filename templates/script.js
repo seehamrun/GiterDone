@@ -4,6 +4,7 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
     response.json().then(function(data)){
       console.log(data);
       temp.innerHTML = "<h1>The current weather is" + data.data.current_condition[0].temp_F + "F<h1>"
-      condition.innerHTML = "<p>" + data.data.current_condition[0]. weatherDesc[0]. value + "</p>"
+      condition.innerHTML = "<p>" + data.data.current_condition[0].weatherDesc[0].value + "</p>"
+      pic.innerHTML = <"img src='" + data.data.current_condition[0].weatherIconUrl[0].value + "'/>"
     }
   })
