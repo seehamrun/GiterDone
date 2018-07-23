@@ -2,6 +2,14 @@
   float: right;
 }
 
+#app_name {
+  font-size: 100px;
+  color: turquoise;
+  text-align: center;
+  font-family: impact;
+  margin: 5px;
+}
+
 .tabBar {
   background-color: white;
 }
@@ -11,6 +19,9 @@
   border: white;
   border-radius: 10px;
   margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  font-family: impact;
 }
 
 .schedule {
@@ -18,6 +29,9 @@
   border: white;
   border-radius: 10px;
   margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  font-family: impact;
 }
 
 .history {
@@ -25,7 +39,9 @@
   border: white;
   border-radius: 10px;
   margin: 5px;
-  font-style: bold
+  font-size: 30px;
+  text-align: center;
+  font-family: impact;
 }
 
 .settings {
@@ -33,6 +49,9 @@
   border: white;
   border-radius: 10px;
   margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  font-family: impact;
 }
 
 .container {
