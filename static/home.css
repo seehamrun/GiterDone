@@ -3,23 +3,31 @@
 }
 
 .tabBar {
-  background-color: red;
+  background-color: white;
 }
 
 .home {
-  background-color: orange;
+  background-color: turquoise;
+  border: white;
+  border-radius: 2px;
 }
 
 .schedule {
-  background-color: yellow;
+  background-color: turquoise;
+  border: white;
+  border-radius: 2px;
 }
 
 .history {
-  background-color: green;
+  background-color: turquoise;
+  border: white;
+  border-radius: 2px;
 }
 
 .settings {
-  background-color: blue;
+  background-color: turquoise;
+  border: white;
+  border-radius: 2px;
 }
 
 .container {
