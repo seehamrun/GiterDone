@@ -37,6 +37,12 @@ class HistoryHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/history.html')
         return self.response.write(template.render())
 
+class SettngsHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/settings.html')
+        return self.response.write(template.render())
+)
+
 app = webapp2.WSGIApplication([
     ('/', IndexHandler),
     ('/schedule', ScheduleHandler),
