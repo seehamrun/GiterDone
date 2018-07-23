@@ -46,5 +46,5 @@ app = webapp2.WSGIApplication([
     ('/', IndexHandler),
     ('/schedule', ScheduleHandler),
     ('/history', HistoryHandler)
-    ('/settngs', SettngsHandler)
+    ('/settings', SettngsHandler)
 ], debug=True)
