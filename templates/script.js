@@ -1,4 +1,5 @@
-fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather_key + "&q=60642&format=json&num_of_days=1")
+var checkedValue = $('.messageCheckbox:checked').val();
+fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather_key + "&q=93786&format=json&num_of_days=1")
   .then(function(response){
     response.json().then(function(data)){
       console.log(data);

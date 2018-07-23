@@ -8,10 +8,11 @@ from google.appengine.api import users
 from google.appengine.api import urlfetch
 
 
-class DatabaseForCoolPeople(ndb.Model):
+class WaterDatabase(ndb.Model):
     name = ndb.StringProperty()
-    amtOfWater = ndb.IntegerProperty()
+    totalWater = ndb.IntegerProperty()
     date = ndb.StringProperty()
+    incWater = ndb.IntegerProperty()
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
