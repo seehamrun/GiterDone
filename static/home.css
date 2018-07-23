@@ -17,6 +17,22 @@
   margin: 20px;
 }
 
+#home {
+  color: white;
+}
+
+#schedule {
+  color: white;
+}
+
+#history {
+  color: white;
+}
+
+#settings {
+  color: white;
+}
+
 .tabBar {
   background-color: white;
 }
