@@ -41,7 +41,7 @@ class SettngsHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/settings.html')
         return self.response.write(template.render())
-)
+
 
 app = webapp2.WSGIApplication([
     ('/', IndexHandler),
