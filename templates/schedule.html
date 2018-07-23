@@ -10,9 +10,9 @@
     <script src="script.js"></script>
     <h1>Schedule</h1>
     <form action="/script.js" method="get">
-      <input type="checkbox" name="amt" value = 16> I have drank 16oz by %s%s<br>
-      <input type="checkbox" name="amt" value= 16 > I have a car<br>
-      <input type="submit" value="Update">
+      {% for num in range({{amtOfTimes}}) %}
+        <input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br>
+      {% endfor %}
     </form>
   <p> The weather is</p>
   </body>
