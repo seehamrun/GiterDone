@@ -1,15 +1,16 @@
 .logout {
   float: right;
   font-family: impact;
-  color: turquoise;
+  color: #33ccff;
 }
 
 #app_name {
   font-size: 100px;
-  color: turquoise;
+  color: #33ccff;
   text-align: center;
   font-family: impact;
   margin: 5px;
+  text-shadow: 2px 2px #000000
 }
 
 #water {
@@ -17,7 +18,7 @@
   text-align: center;
   font-family: impact;
   margin: 20px;
-  color: turquoise;
+  color: #33ccff;
 }
 
 #home {
@@ -41,7 +42,7 @@
 }
 
 .home {
-  background-color: turquoise;
+  background-color: #33ccff;
   border: white;
   border-radius: 10px;
   margin: 5px;
@@ -51,7 +52,7 @@
 }
 
 .schedule {
-  background-color: turquoise;
+  background-color: #33ccff;
   border: white;
   border-radius: 10px;
   margin: 5px;
@@ -61,7 +62,7 @@
 }
 
 .history {
-  background-color: turquoise;
+  background-color: #33ccff;
   border: white;
   border-radius: 10px;
   margin: 5px;
@@ -71,7 +72,7 @@
 }
 
 .settings {
-  background-color: turquoise;
+  background-color: #33ccff;
   border: white;
   border-radius: 10px;
   margin: 5px;
