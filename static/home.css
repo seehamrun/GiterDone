@@ -2,32 +2,63 @@
   float: right;
 }
 
+#app_name {
+  font-size: 100px;
+  color: turquoise;
+  text-align: center;
+  font-family: impact;
+  margin: 5px;
+}
+
+#water {
+  font-size: 25px;
+  text-align: right;
+  font-family: impact;
+  margin: 5px;
+}
+
 .tabBar {
   background-color: white;
 }
 
 .home {
   background-color: turquoise;
-  border: blue;
-  border-radius: 2px;
+  border: white;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  font-family: impact;
 }
 
 .schedule {
   background-color: turquoise;
   border: white;
-  border-radius: 2px;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  font-family: impact;
 }
 
 .history {
   background-color: turquoise;
   border: white;
-  border-radius: 2px;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  font-family: impact;
 }
 
 .settings {
   background-color: turquoise;
   border: white;
-  border-radius: 2px;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  font-family: impact;
 }
 
 .container {
