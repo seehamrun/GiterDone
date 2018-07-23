@@ -29,6 +29,12 @@ class IndexHandler(webapp2.RequestHandler):
           'logoutUrl': users.create_logout_url('/')
         }
         return self.response.write(template.render(data))
+        template = jinja_env.get_template('templates/history.html')
+        data = {
+        'user_nickname': user.nickname(),
+          'logoutUrl': users.create_logout_url('/')
+        }
+        return self.response.write(template.render(data))
 
 class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
