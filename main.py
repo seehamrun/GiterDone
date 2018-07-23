@@ -23,12 +23,12 @@ class IndexHandler(webapp2.RequestHandler):
         return self.response.write(template.render(data))
 
 class ScheduleHandler(webapp2.RequestHandler):
-def get(self):
+    def get(self):
         template = jinja_env.get_template('templates/schedule.html')
         return self.response.write(template.render())
 
 class HistoryHandler(webapp2.RequestHandler):
-def get(self):
+    def get(self):
         template = jinja_env.get_template('templates/history.html')
         return self.response.write(template.render())
 
