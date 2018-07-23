@@ -1,3 +1,33 @@
 .logout {
   float: right;
 }
+
+.tabbar {
+  background-color: red;
+}
+
+.home {
+  background-color: orange;
+}
+
+.schedule {
+  background-color: yellow;
+}
+
+.history {
+  background-color: green;
+}
+
+.settings {
+  background-color: blue;
+}
+
+.container {
+  display: grid
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 2fr
+}
