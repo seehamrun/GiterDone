@@ -11,7 +11,7 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
       })
     })
   });
-<<<<<<< HEAD
+
 var checkedDiv = document.querySelectorAll('#checked');
 console.log(checkedDiv)
 checkedDiv.forEach(function(element) {
@@ -19,14 +19,13 @@ checkedDiv.forEach(function(element) {
   var inputSchedule = `<input type='checkbox'>I have drank ${cool}oz by 10AM<br>`
   element.innerHTML = inputSchedule;
 });
-=======
+
 
 var checkedDiv = document.querySelector('#checked');
 var cool = 12
 var inputSchedule = `<input type='checkbox'>I have drank ${cool} oz by 10AM<br>`
 console.log(checkedDiv);
 checkedDiv.innerHTML = inputSchedule;
->>>>>>> 9e1162c9f658ce4dc5b372aac45b54f79703cd91
 
 
 
