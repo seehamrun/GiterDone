@@ -37,6 +37,11 @@
   color: white;
 }
 
+body {
+  background-image: url(https://www.uiwater.com/images/default-source/utilities-basic/buisness-units/florida/waterdorp.png?sfvrsn=2);
+  background-size: cover;
+}
+
 .tabBar {
   background-color: white;
 }
