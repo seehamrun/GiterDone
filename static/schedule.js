@@ -11,11 +11,13 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
       })
     })
   });
-var checkedDiv = document.querySelector('#checked');
-var cool = 12
-var inputSchedule = `<input type='checkbox'>I have drank ${cool} oz by 10AM<br>`
-console.log(checkedDiv);
-checkedDiv.innerHTML = inputSchedule;
+var checkedDiv = document.querySelectorAll('#checked');
+console.log(checkedDiv)
+checkedDiv.forEach(function(element) {
+  var cool = 12
+  var inputSchedule = `<input type='checkbox'>I have drank ${cool}oz by 10AM<br>`
+  element.innerHTML = inputSchedule;
+});
 
 //"<input type='checkbox'>I have drank"+ %s +"oz by 10AM<br>" % (12)
   // fetch("http://api.apixu.com/v1/current.json?key=" + weatherApi + "&q=60607")
