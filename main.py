@@ -40,7 +40,7 @@ class IndexHandler(webapp2.RequestHandler):
 class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/schedule.html')
-        return self.response.write(template.render())
+        self.response.write(template.render())
 
         userTemp = self.request.get("temp")
         logging.info("This is user temp")
@@ -58,7 +58,7 @@ class SettingsHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/settings.html')
         return self.response.write(template.render())
 
-class AddWater (webapp2.RequestHandler):
+class AddWater(webapp2.RequestHandler):
     def post(self):
         requestUrl = self.request.get('url')
         logging.info('server saw a request to add %s to amount of water' % (requestUrl))
