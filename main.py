@@ -42,6 +42,11 @@ class ScheduleHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/schedule.html')
         return self.response.write(template.render())
 
+        userTemp = self.request.get("temp")
+        logging.info("This is user temp")
+        logging.info(userTemp)
+
+
 class HistoryHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/history.html')

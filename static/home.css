@@ -37,6 +37,21 @@
   color: white;
 }
 
+#twitter {
+  width: 50px;
+  height: auto;
+}
+
+#facebook {
+  width: 50px;
+  height: auto;
+}
+
+#instagram {
+  width: 50px;
+  height: auto;
+}
+
 body {
   background-image: url(https://www.uiwater.com/images/default-source/utilities-basic/buisness-units/florida/waterdorp.png?sfvrsn=2);
   background-size: cover;
