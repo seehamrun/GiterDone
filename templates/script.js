@@ -11,7 +11,18 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
   })
 
 
-    window.addEventListener('load', () => {
-      document.querySelector('#submit').addEventListener("click", submitClick)
 
-    });
+    function numberReminderTimes() {
+      var reminderTimes = document.querySelector("#reminderTime2");
+      reminderTime2.add(reminderTime2)
+    }
+
+    function showReminderTimes() {
+      var one = document.querySelector("#1");
+      one.addEventListener('click', numberReminderTimes);
+      var two = document.querySelector("#2");
+      two.addEventListener('click', numberReminderTimes);
+      var three = document.querySelector("#3");
+      three.addEventListener('click', numberReminderTimes);
+
+    window.addEventListener('load', showReminderTimes)
