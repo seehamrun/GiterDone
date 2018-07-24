@@ -4,7 +4,7 @@
       <link rel="stylesheet" href="static/schedule.css"></link>
       <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src = "/static/api.js"></script>
-      <script src = "/static/schedule.js"></script>
+
   </head>
 
   <body>
@@ -26,14 +26,15 @@
     </div>
     <form action="templates/schedule.js" method="post">
       {% for num in range(5) %}
-        <div id="checked"></div>
+      <div id="checked"></div>
       {% endfor %}
-      <input type="submit" value="Update">
+      <input type="submit" id="submit" value="Update">
     </form>
 
         <div id="temp"></div>
         <div id="condition"></div>
         <div id="pic"></div>
+        <script src = "/static/schedule.js"></script>
   </body>
 
 
