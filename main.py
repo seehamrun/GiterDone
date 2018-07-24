@@ -14,6 +14,13 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+
+class WaterDatabase(ndb.Model):
+    name = ndb.StringProperty()
+    totalWater = ndb.IntegerProperty()
+    date = ndb.StringProperty()
+    incWater = ndb.IntegerProperty()
+
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -35,21 +42,6 @@ class ScheduleHandler(webapp2.RequestHandler):
         logging.info("This is user temp")
         logging.info(userTemp)
 
-    def post(self):
-        name = self.name.get('name')
-        totalWater = self.totalWater.get('totalWater')
-        date = self.date.get('date')
-        incWater = self.incWater.get('incWater')
-        self.response.headers['Content-Type'] = 'text/html'
-
-amtOfTimes = database.DatabaseDog(name=name,
-            totalWater=int(totalWater), date=int(date), incWater=int(incWater))
-        amtOfTimes.put()
-        response_html = jinja_env.get_template('templates/history.html')
-        data = {
-            'name': name
-        }
-        self.response.write(response_html.render(data))
 
 class HistoryHandler(webapp2.RequestHandler):
     def get(self):
