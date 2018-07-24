@@ -3,7 +3,6 @@ import logging
 import jinja2
 import os
 
-import database
 
 from google.appengine.ext import ndb
 from google.appengine.api import users
