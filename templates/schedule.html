@@ -3,9 +3,7 @@
   <head>
       <link rel="stylesheet" href="stat/schedule.css"></link>
       <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
-      <script src= "../api.js"></script>
-      <script src= "script.js"></script>
-        <title>Schedule</title>
+      <script src= "schedule.js"></script>
   </head>
 
   <body>
@@ -26,16 +24,16 @@
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
     </div>
-    <form action="templates/script.js" method="get">
+    <!-- <form action="templates/script.js" method="get">
       {% for num in "{{amtOfTimes}}" %}
       <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br></div>
-      <!--<div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 8 AM<br></div>
+      <!<div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 8 AM<br></div>
       <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 12 PM<br></div>
       <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 4 PM<br></div>
       <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 8 PM<br></div> -->
-      {% endfor %}
-      <input type="submit" value="Submit">
-    </form>
+      <!-- {% endfor %}
+      <input type="submit" value="Submit"> -->
+    <!-- </form> -->
       <p> The weather is</p>
         <div id="temp"></div>
         <div id="condition"></div>
