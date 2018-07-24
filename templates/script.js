@@ -9,7 +9,7 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
       pic.innerHTML = <"img src='" + data.data.current_condition[0].weatherIconUrl[0].value + "'/>"
     }
   })
-<<<<<<< HEAD
+
 
 
 
@@ -27,5 +27,3 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
       three.addEventListener('click', numberReminderTimes);
 
     window.addEventListener('load', showReminderTimes)
-=======
->>>>>>> b5a02f79dda346b7d2072d7a085e029d7fe5a5fa
