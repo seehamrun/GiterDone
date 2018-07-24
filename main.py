@@ -3,7 +3,6 @@ import logging
 import jinja2
 import os
 
-
 from google.appengine.ext import ndb
 from google.appengine.api import users
 from google.appengine.api import urlfetch
@@ -25,6 +24,13 @@ jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
+
+
+class WaterDatabase(ndb.Model):
+    name = ndb.StringProperty()
+    totalWater = ndb.IntegerProperty()
+    date = ndb.StringProperty()
+    incWater = ndb.IntegerProperty()
 
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
