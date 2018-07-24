@@ -45,8 +45,5 @@ checkedDiv.forEach(function(element) {
 
   window.addEventListener('load', () => {
     document.querySelector('#submit').addEventListener("click", submitClick)
-    document.querySelector("#reminder").addEventListener("")
 
   });
-
-var reminderAmt = 0
