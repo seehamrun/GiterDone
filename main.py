@@ -56,7 +56,53 @@ class HistoryHandler(webapp2.RequestHandler):
 class SettingsHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/settings.html')
-        return self.response.write(template.render())
+        name = self.request.get('name')
+        age = self.request.get('age')
+        height = self.request.get('height')
+        weight = self.request.get('weight')
+        water_goal = self.request.get('water_goal')
+        numberReminderTimes = self.request.get('numberReminderTimes')
+        reminderTime1 = self.request.get('reminderTime1')
+        reminderTime2 = self.request.get('reminderTime2')
+        reminderTime3 = self.request.get('reminderTime3')
+        reminderTime4 = self.request.get('reminderTime4')
+        reminderTime5 = self.request.get('reminderTime5')
+        reminderTime6 = self.request.get('reminderTime6')
+        reminderTime7 = self.request.get('reminderTime7')
+        reminderTime8 = self.request.get('reminderTime8')
+        reminderTime9 = self.request.get('reminderTime9')
+        reminderTime10 = self.request.get('reminderTime10')
+        reminderTime11 = self.request.get('reminderTime11')
+        reminderTime12 = self.request.get('reminderTime12')
+
+        # if numberReminderTimes == "1":
+        #     print(reminderTime1)
+        # elif numberReminderTimes == "2":
+        #     print(reminderTime1 + reminderTime2)
+        # else:
+        #     print("This isn't working")
+
+        userInput = {
+            "userName": name,
+            "userAge": age,
+            "userHeight": height,
+            "userWeight": weight,
+            "userWaterGoal": water_goal,
+            "numberReminderTimes": numberReminderTimes,
+            "reminderTime1": reminderTime1,
+            "reminderTime2": reminderTime2,
+            "reminderTime3": reminderTime3,
+            "reminderTime4": reminderTime4,
+            "reminderTime5": reminderTime5,
+            "reminderTime6": reminderTime6,
+            "reminderTime7": reminderTime7,
+            "reminderTime8": reminderTime8,
+            "reminderTime9": reminderTime9,
+            "reminderTime10": reminderTime10,
+            "reminderTime11": reminderTime11,
+            "reminderTime12": reminderTime12,
+        }
+        return self.response.write(template.render(userInput))
 
 class AddWater(webapp2.RequestHandler):
     def post(self):
