@@ -1,10 +1,11 @@
 <html>
 
   <head>
-    <title>Schedule</title>
       <link rel="stylesheet" href="stat/schedule.css"></link>
-      <script src= "templates/script.js"></script>
-      <script src= "api.js"></script>
+      <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src= "../api.js"></script>
+      <script src= "script.js"></script>
+        <title>Schedule</title>
   </head>
 
   <body>
@@ -27,7 +28,11 @@
     </div>
     <form action="templates/script.js" method="get">
       {% for num in "{{amtOfTimes}}" %}
-        <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br></div>
+      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br></div>
+      <!--<div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 8 AM<br></div>
+      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 12 PM<br></div>
+      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 4 PM<br></div>
+      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 8 PM<br></div> -->
       {% endfor %}
       <input type="submit" value="Submit">
     </form>

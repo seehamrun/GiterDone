@@ -10,7 +10,7 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
     }
   })
 
-  function addWaterdatabase(waterdatabaseUrl, doneCallback) {
+  function addWaterDatabase(waterdatabaseUrl, doneCallback) {
     jQuery.post("/history", {url: waterdatabaseUrl}, doneCallback);
   }
 
