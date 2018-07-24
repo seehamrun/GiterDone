@@ -15,11 +15,11 @@ var checkedDiv = document.querySelectorAll('#checked');
 var cool = 12
 var times = ["10AM", "12PM", "2PM", "4PM", "6PM"]
 console.log(checkedDiv)
+var i = 0;
 checkedDiv.forEach(function(element) {
-  for(i = 0; i < times.length; i++){
-    var inputSchedule = `<input type='checkbox'>I have drank ${cool}oz by ${times[i]}<br>`
-    element.innerHTML = inputSchedule;
-  }
+  var inputSchedule = `<input type='checkbox'>I have drank ${cool}oz by ${times[i]}<br>`
+  element.innerHTML = inputSchedule;
+  i++;
 });
 
 //"<input type='checkbox'>I have drank"+ %s +"oz by 10AM<br>" % (12)
