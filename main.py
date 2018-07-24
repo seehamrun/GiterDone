@@ -58,7 +58,7 @@ class SettingsHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/settings.html')
         return self.response.write(template.render())
 
-class AddWater (webapp2.RequestHandler):
+class AddWater(webapp2.RequestHandler):
     def post(self):
         requestUrl = self.request.get('url')
         logging.info('server saw a request to add %s to amount of water' % (requestUrl))
