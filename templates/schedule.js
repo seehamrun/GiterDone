@@ -25,8 +25,8 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
 
   function submitClick() {
     var inputBox = document.querySelector('#queryBox')
-    var userInput = inputBox.value
-    queryGiphy(userInput, displayResult)
+    var userInput = userInput + inputBox.value
+    addWaterDatabase(userInput, displayResult)
   }
 
 
