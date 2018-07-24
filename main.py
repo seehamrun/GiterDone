@@ -7,12 +7,7 @@ from google.appengine.ext import ndb
 from google.appengine.api import users
 from google.appengine.api import urlfetch
 
-class amtOfTimes:
-     def __init__(name, totalWater, date, incWater):
-         self.name = name
-         self.totalWater = totalWater
-         self.date = date
-         self.incWater = incWater
+
 
 class WaterDatabase(ndb.Model):
     name = ndb.StringProperty()
@@ -20,7 +15,12 @@ class WaterDatabase(ndb.Model):
     date = ndb.StringProperty()
     incWater = ndb.IntegerProperty()
 
-
+class amtOfTimes:
+     def __init__(name, totalWater, date, incWater):
+         self.name = name
+         self.totalWater = totalWater
+         self.date = date
+         self.incWater = incWater
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
