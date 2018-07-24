@@ -8,7 +8,18 @@ from google.appengine.ext import ndb
 from google.appengine.api import users
 from google.appengine.api import urlfetch
 
+class WaterDatabase(ndb.Model):
+    name = ndb.StringProperty()
+    totalWater = ndb.IntegerProperty()
+    date = ndb.StringProperty()
+    incWater = ndb.IntegerProperty()
 
+class amtOfTimes:
+     def __init__(name, totalWater, date, incWater):
+         self.name = name
+         self.totalWater = totalWater
+         self.date = date
+         self.incWater = incWater
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -36,21 +47,6 @@ class ScheduleHandler(webapp2.RequestHandler):
         logging.info("This is user temp")
         logging.info(userTemp)
 
-    def post(self):
-        name = self.name.get('name')
-        totalWater = self.totalWater.get('totalWater')
-        date = self.date.get('date')
-        incWater = self.incWater.get('incWater')
-        self.response.headers['Content-Type'] = 'text/html'
-
-amtOfTimes = database.DatabaseDog(name=name,
-            totalWater=int(totalWater), date=int(date), incWater=int(incWater))
-        amtOfTimes.put()
-        response_html = jinja_env.get_template('templates/history.html')
-        data = {
-            'name': name
-        }
-        self.response.write(response_html.render(data))
 
 class HistoryHandler(webapp2.RequestHandler):
     def get(self):
