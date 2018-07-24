@@ -24,16 +24,12 @@
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
     </div>
-    <!-- <form action="templates/script.js" method="get">
-      {% for num in "{{amtOfTimes}}" %}
-      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br></div>
-      <!<div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 8 AM<br></div>
-      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 12 PM<br></div>
-      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 4 PM<br></div>
-      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 8 PM<br></div> -->
-      <!-- {% endfor %}
-      <input type="submit" value="Update"> -->
-    <!-- </form> -->
+    <form action="templates/history.html" method="post">
+      {% for num in range(6) %}
+      <div><input type="text"><br></div>
+      {% endfor %}
+      <input type="submit" value="Update">
+    </form>
 
         <div id="temp"></div>
         <div id="condition"></div>
