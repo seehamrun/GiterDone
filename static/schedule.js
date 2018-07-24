@@ -6,7 +6,7 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
       console.log(data);
       temp.innerHTML = "<h1>The current weather is " + data.data.current_condition[0].temp_F + "F<h1>"
       condition.innerHTML = "<p>" + data.data.current_condition[0].weatherDesc[0].value + "</p>"
-      pic.innerHTML = <"img src='" + data.data.current_condition[0].weatherIconUrl[0].value + "'/>"
+      pic.innerHTML = "<img src='" + data.data.current_condition[0].weatherIconUrl[0].value + "'/>"
     });
   })
 
@@ -25,12 +25,12 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
 
   function submitClick() {
     var inputBox = document.querySelector('#queryBox')
-    var userInput = inputBox.value
-    queryGiphy(userInput, displayResult)
+    var userInput = userInput + inputBox.value
+    addWaterDatabase(userInput, displayResult)
   }
 
 
   window.addEventListener('load', () => {
-    document.querySelector('#submit').addEventListener("click", submitClick)
+    document.querySelector('#Update').addEventListener("click", submitClick)
 
   });
