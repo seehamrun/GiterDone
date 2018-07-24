@@ -43,7 +43,7 @@
         </tr>
         <tr>
           <td>Water Goal:</td>
-          <td>9 cups</td>
+          <td>72 oz</td>
         </tr>
         <tr>
           <td>Number of Reminders:</td>
@@ -62,7 +62,30 @@
           <td>4pm</td>
         </tr>
       </table>
-    </div>
+
+    <form>
+      <div>Name: <input type='text' name="name" value='{{userName}}'></div>
+      <div>Age: <input type='text' name="age" value='{{userAge}}'></div>
+      <div>Height: <input type='text' name="height" value='{{userHeight}}'></div>
+      <div>Weight: <input type='text' name="weight" value='{{userWeight}}'></div>
+      <div>Water Goal: <input type='text' name="water_goal" value='{{userWaterGoal}}'></div>
+      <div>Number of Reminder Times: <select name = "Number of Reminder Times">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+      </select>
+      </div>
+      <div><input type="submit"></div>
+    </form>
   </body>
 
 </html>
