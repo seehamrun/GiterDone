@@ -7,20 +7,12 @@ from google.appengine.ext import ndb
 from google.appengine.api import users
 from google.appengine.api import urlfetch
 
-class amtOfTimes:
-     def __init__(name, totalWater, date, incWater):
-         self.name = name
-         self.totalWater = totalWater
-         self.date = date
-         self.incWater = incWater
 
 class WaterDatabase(ndb.Model):
     name = ndb.StringProperty()
     totalWater = ndb.IntegerProperty()
     date = ndb.StringProperty()
     incWater = ndb.IntegerProperty()
-
-
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -37,12 +29,7 @@ class IndexHandler(webapp2.RequestHandler):
           'logoutUrl': users.create_logout_url('/')
         }
         return self.response.write(template.render(data))
-        template = jinja_env.get_template('templates/history.html')
-        data = {
-        'user_nickname': user.nickname(),
-          'logoutUrl': users.create_logout_url('/')
-        }
-        return self.response.write(template.render(data))
+
 
 class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
