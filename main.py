@@ -40,7 +40,7 @@ class IndexHandler(webapp2.RequestHandler):
 class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/schedule.html')
-        return self.response.write(template.render())
+        self.response.write(template.render())
 
         userTemp = self.request.get("temp")
         logging.info("This is user temp")

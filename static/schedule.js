@@ -4,12 +4,12 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
   .then(function(response){
     response.json().then(function(data){
       console.log(data);
-      temp = data.data.current_condition[0].temp_F
-      temp.innerHTML = "<h1>The current weather is " + temp + "F<h1>"
+      currentTemp = data.data.current_condition[0].temp_F
+      temp.innerHTML = "<h1>The current weather is " + currentTemp + "F<h1>"
       condition.innerHTML = "<p>" + data.data.current_condition[0].weatherDesc[0].value + "</p>"
       pic.innerHTML = "<img src='" + data.data.current_condition[0].weatherIconUrl[0].value + "'/>"
 
-      jQuery.get("/schedule?temp=" + temp, () => {
+      jQuery.get("/schedule?temp=" + currentTemp, () => {
         alert("saved")
       })
     });
