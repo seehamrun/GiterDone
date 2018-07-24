@@ -34,6 +34,13 @@
         <td>Goal</td>
         <td>Amount of Water Consumed</td>
       </tr>
+      {% for dog in dogs %}
+      <tr>
+        <td>{{amtOfTimes.date}}</td>
+        <td>{{amtOfTimes.totalWater}}</td>
+        <td>{{amtOfTimes.incWater}}</td>
+      </tr>
+      {% endfor %}
   </table>
   </body>
 

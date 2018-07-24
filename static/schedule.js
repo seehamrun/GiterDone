@@ -10,7 +10,7 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
       })
     })
   });
-var checkedDiv = document.querySelectorAll('#checked');
+var checkedDiv = document.querySelectorAll('.checked');
 var cool = 12
 var times = ["10AM", "12PM", "2PM", "4PM", "6PM"]
 console.log(checkedDiv)
