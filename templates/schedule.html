@@ -3,12 +3,12 @@
   <head>
       <link rel="stylesheet" href="static/schedule.css"></link>
       <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
-      <script src= "/templates/schedule.js"></script>
+      <script src = "/static/api.js"></script>
+      <script src = "/static/schedule.js"></script>
   </head>
 
   <body>
     <a class="logout" href="{{logoutUrl}}">Log Out</a>
-    <script src="/templates/schedule.js"></script>
     <h1 id="schedule_header">Schedule</h1>
     <div class="wrapper">
       <div class="tabBar home">
@@ -34,7 +34,7 @@
       <!-- {% endfor %}
       <input type="submit" value="Update"> -->
     <!-- </form> -->
-      <p> The weather is</p>
+
         <div id="temp"></div>
         <div id="condition"></div>
         <div id="pic"></div>
