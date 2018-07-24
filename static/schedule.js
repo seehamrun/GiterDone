@@ -14,7 +14,8 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
   });
 
 var checkedDiv = document.querySelector('#checked');
-var inputSchedule = "<p>hello</p>";
+var cool = 12
+var inputSchedule = `<input type='checkbox'>I have drank ${cool} oz by 10AM<br>`
 console.log(checkedDiv);
 checkedDiv.innerHTML = inputSchedule;
 
@@ -43,6 +44,6 @@ checkedDiv.innerHTML = inputSchedule;
 
 
   window.addEventListener('load', () => {
-    document.querySelector('#Update').addEventListener("click", submitClick)
+    document.querySelector('#submit').addEventListener("click", submitClick)
 
   });
