@@ -9,23 +9,16 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
       pic.innerHTML = <"img src='" + data.data.current_condition[0].weatherIconUrl[0].value + "'/>"
     }
   })
-<<<<<<< HEAD
+function numberReminderTimes() {
+  var reminderTimes = document.querySelector("#reminderTime2");
+  reminderTime2.add(reminderTime2)
+}
 
-
-
-    function numberReminderTimes() {
-      var reminderTimes = document.querySelector("#reminderTime2");
-      reminderTime2.add(reminderTime2)
-    }
-
-    function showReminderTimes() {
-      var one = document.querySelector("#1");
-      one.addEventListener('click', numberReminderTimes);
-      var two = document.querySelector("#2");
-      two.addEventListener('click', numberReminderTimes);
-      var three = document.querySelector("#3");
-      three.addEventListener('click', numberReminderTimes);
-
-    window.addEventListener('load', showReminderTimes)
-=======
->>>>>>> b5a02f79dda346b7d2072d7a085e029d7fe5a5fa
+function showReminderTimes() {
+  var one = document.querySelector("#1");
+  one.addEventListener('click', numberReminderTimes);
+  var two = document.querySelector("#2");
+  two.addEventListener('click', numberReminderTimes);
+  var three = document.querySelector("#3");
+  three.addEventListener('click', numberReminderTimes)
+  window.addEventListener('load', showReminderTimes)
