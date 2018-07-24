@@ -9,10 +9,3 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
       pic.innerHTML = <"img src='" + data.data.current_condition[0].weatherIconUrl[0].value + "'/>"
     }
   })
-
-
-
-    window.addEventListener('load', () => {
-      document.querySelector('#submit').addEventListener("click", submitClick)
-
-    });
