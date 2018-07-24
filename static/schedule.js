@@ -28,9 +28,3 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
     var userInput = userInput + inputBox.value
     addWaterDatabase(userInput, displayResult)
   }
-
-
-  window.addEventListener('load', () => {
-    document.querySelector('#Update').addEventListener("click", submitClick)
-
-  });
