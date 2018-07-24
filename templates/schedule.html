@@ -24,26 +24,12 @@
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
     </div>
-<<<<<<< HEAD
-    <form action="templates/history.html" method="post">
-      {% for num in range(6) %}
-      <div><input type="text"><br></div>
+    <form action="templates/schedule.js" method="post">
+      {% for num in range(5) %}
+      <div id="checked"></div>
       {% endfor %}
       <input type="submit" value="Update">
     </form>
-=======
-      <h1> Your daily goal is % </h1>
-    <!-- <form action="templates/script.js" method="get">
-      {% for num in "{{amtOfTimes}}" %}
-      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank {{incWater}}oz by {{time}}{{meridiem}}<br></div>
-      <!<div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 8 AM<br></div>
-      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 12 PM<br></div>
-      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 4 PM<br></div>
-      <div><input type="checkbox" name="amt" value = {{incWater}}> I have drank 16 oz by 8 PM<br></div> -->
-      <!-- {% endfor %}
-      <input type="submit" value="Update"> -->
-    <!-- </form> -->
->>>>>>> 172fe408e201fe54ba9c580bfe0252e5897a8816
 
         <div id="temp"></div>
         <div id="condition"></div>
