@@ -57,7 +57,8 @@ class AddWater (webapp2.RequestHandler):
     def post(self):
         requestUrl = self.request.get('url')
         logging.info('server saw a request to add %s to amount of water' % (requestUrl))
-        
+        waterDatabse = WaterDatabase(url=requestUrl)
+        waterDatabase.put()
 
 
 
