@@ -17,16 +17,6 @@ var inputSchedule = `<input type='checkbox'>I have drank ${cool} oz by 10AM<br>`
 console.log(checkedDiv);
 checkedDiv.innerHTML = inputSchedule;
 
-<<<<<<< HEAD
-=======
-      jQuery.get("/schedule?temp=" + currentTemp, () => {
-        alert("saved")
-      })
-    });
-  })
->>>>>>> 55761baaad377c9c76e66bf6b168cd97844098e3
->>>>>>> 0295cbcd328fffc90753ad9f862c2f39dbf42159
-
 //"<input type='checkbox'>I have drank"+ %s +"oz by 10AM<br>" % (12)
   // fetch("http://api.apixu.com/v1/current.json?key=" + weatherApi + "&q=60607")
   //   .then(function(response){
