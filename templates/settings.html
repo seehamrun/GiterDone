@@ -7,7 +7,7 @@
 
   <body>
     <a class="logout" href="{{logoutUrl}}">Log Out</a>
-    <script src="/static/script.js"></script>
+    <script src="/static/schedule.js"></script>
     <h1 id="settings_header">Settings</h1>
     <div class="wrapper">
       <div class="tabBar home">
@@ -69,10 +69,10 @@
       <div>Height: <input type='text' name="height" value='{{userHeight}}'></div>
       <div>Weight: <input type='text' name="weight" value='{{userWeight}}'></div>
       <div>Water Goal: <input type='text' name="water_goal" value='{{userWaterGoal}}'></div>
-      <div>Number of Reminder Times: <select name = "numberReminderTimes">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
+      <div>Number of Reminder Times: <select id="reminder"name = "numberReminderTimes">
+          <option value="1" id="1">1</option>
+          <option value="2" id="2">2</option>
+          <option value="3" id="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
           <option value="6">6</option>
@@ -84,7 +84,7 @@
           <option value="12">12</option>
       </select>
       </div>
-      <div>Reminder Time 1: <input type='text' name="reminderTime1" value='{{reminderTime1}}'></div>
+      <div id="reminderTime1">Reminder Time 1: <input type='text' name="reminderTime1" value='{{reminderTime1}}'></div>
       <div>Reminder Time 2: <input type='text' name="reminderTime2" value='{{reminderTime2}}'></div>
       <div>Reminder Time 3: <input type='text' name="reminderTime3" value='{{reminderTime3}}'></div>
       <div>Reminder Time 4: <input type='text' name="reminderTime4" value='{{reminderTime4}}'></div>
