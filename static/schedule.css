@@ -78,3 +78,42 @@
   grid-template-columns: 2fr 2fr 2fr 2fr;
   grid-template-rows: 2fr
 }
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr
+}
+
+.weather {
+  text-align: center;
+}
+
+.titles {
+  color: black;
+  font-size: 30px;
+  font-family: impact;
+}
+
+#temp {
+  color: #33ccff;
+  font-size: 15px;
+  font-family: impact;
+}
+
+#condition {
+  color: #33ccff;
+  font-size: 20px;
+  font-family: impact;
+}
+
+#pic {
+  image-resolution: 200px;
+}
+
+#checkboxes {
+  font-size: 20px;
+  font-family: impact;
+  color: #33ccff;
+  margin-left: 20px;
+}

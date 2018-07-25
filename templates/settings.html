@@ -23,7 +23,7 @@
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
     </div>
-    <div>
+    <!-- <div>
       <table>
         <tr>
             <td>Name:</td>
@@ -59,18 +59,17 @@
         </tr>
         <tr>
           <td>Reminder Time 3:</td>
-          <td>4 pm</td>
+          <td>4pm</td>
         </tr>
-      </table>
+      </table> -->
 
-    <form method="post">
+    <form id="editUserPreferences">
       <div>Name: <input type='text' name="name" value='{{userName}}'></div>
       <div>Age: <input type='text' name="age" value='{{userAge}}'></div>
       <div>Height: <input type='text' name="height" value='{{userHeight}}'></div>
       <div>Weight: <input type='text' name="weight" value='{{userWeight}}'></div>
       <div>Water Goal: <input type='text' name="water_goal" value='{{userWaterGoal}}'></div>
       <div>Number of Reminder Times: <select id="reminder"name = "numberReminderTimes" onchange="showReminderTimes(this.value)">
-          <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -86,18 +85,18 @@
       </select>
       </div>
       <div id="reminderTimes">
-        <div id="inputs">Reminder Time 1: <input type='text' name="reminderTime1" value='{{reminderTime1}}'></div>
-        <div id="inputs">Reminder Time 2: <input type='text' name="reminderTime2" value='{{reminderTime2}}'></div>
-        <div id="inputs">Reminder Time 3: <input type='text' name="reminderTime3" value='{{reminderTime3}}'></div>
-        <div id="inputs">Reminder Time 4: <input type='text' name="reminderTime4" value='{{reminderTime4}}'></div>
-        <div id="inputs">Reminder Time 5: <input type='text' name="reminderTime5" value='{{reminderTime5}}'></div>
-        <div id="inputs">Reminder Time 6: <input type='text' name="reminderTime6" value='{{reminderTime6}}'></div>
-        <div id="inputs">Reminder Time 7: <input type='text' name="reminderTime7" value='{{reminderTime7}}'></div>
-        <div id="inputs">Reminder Time 8: <input type='text' name="reminderTime8" value='{{reminderTime8}}'></div>
-        <div id="inputs">Reminder Time 9: <input type='text' name="reminderTime9" value='{{reminderTime9}}'></div>
-        <div id="inputs">Reminder Time 10: <input type='text' name="reminderTime10" value='{{reminderTime10}}'></div>
-        <div id="inputs">Reminder Time 11: <input type='text' name="reminderTime11" value='{{reminderTime11}}'></div>
-        <div id="inputs">Reminder Time 12: <input type='text' name="reminderTime12" value='{{reminderTime12}}'></div>
+        <div>Reminder Time 1: <input type='text' name="reminderTime1" value='{{reminderTime1}}'></div>
+        <div>Reminder Time 2: <input type='text' name="reminderTime2" value='{{reminderTime2}}'></div>
+        <div>Reminder Time 3: <input type='text' name="reminderTime3" value='{{reminderTime3}}'></div>
+        <div>Reminder Time 4: <input type='text' name="reminderTime4" value='{{reminderTime4}}'></div>
+        <div>Reminder Time 5: <input type='text' name="reminderTime5" value='{{reminderTime5}}'></div>
+        <div>Reminder Time 6: <input type='text' name="reminderTime6" value='{{reminderTime6}}'></div>
+        <div>Reminder Time 7: <input type='text' name="reminderTime7" value='{{reminderTime7}}'></div>
+        <div>Reminder Time 8: <input type='text' name="reminderTime8" value='{{reminderTime8}}'></div>
+        <div>Reminder Time 9: <input type='text' name="reminderTime9" value='{{reminderTime9}}'></div>
+        <div>Reminder Time 10: <input type='text' name="reminderTime10" value='{{reminderTime10}}'></div>
+        <div>Reminder Time 11: <input type='text' name="reminderTime11" value='{{reminderTime11}}'></div>
+        <div>Reminder Time 12: <input type='text' name="reminderTime12" value='{{reminderTime12}}'></div>
       </div>
       <div><input type="submit"></div>
     </form>

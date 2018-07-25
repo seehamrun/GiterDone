@@ -12,13 +12,13 @@ class WaterDatabase(ndb.Model):
     totalWater = ndb.IntegerProperty()
     date = ndb.StringProperty()
     incWater = ndb.IntegerProperty()
-    times = ndb.ListProperty()
 
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
+
 
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
@@ -31,23 +31,16 @@ class IndexHandler(webapp2.RequestHandler):
         }
         return self.response.write(template.render(data))
 
-
 class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/schedule.html')
-        # read schedule from DS to get times
-        times = ["10am", "1pm", "3pm"]
-        cool = 20
-        # pass in the values to render
-        values = {
-            "times": times,
-            "cool": cool
-        }
-        self.response.write(template.render(values))
+        return self.response.write(template.render())
+        self.response.write(template.render())
 
         userTemp = self.request.get("temp")
         logging.info("This is user temp")
         logging.info(userTemp)
+
 
 
 class HistoryHandler(webapp2.RequestHandler):
@@ -116,11 +109,8 @@ class AddWater(webapp2.RequestHandler):
         waterDatabase.put()
 
 
-
 app = webapp2.WSGIApplication([
     ('/', IndexHandler),
     ('/schedule', ScheduleHandler),
-    ('/history', HistoryHandler),
-    ('/settings', SettingsHandler),
-    ('/history', AddWater),
+    ('/history', HistoryHandler)
 ], debug=True)
