@@ -77,3 +77,17 @@
   grid-template-columns: 2fr 2fr 2fr 2fr;
   grid-template-rows: 2fr
 }
+
+table#historyTable {
+  width:70%;
+  margin-left:15%;
+  margin-right:15%;
+  color: #ffffff;
+  font-size: 30px;
+  font-family: impact;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #33ccff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+tr:hover {background-color: #ccf5ff;}
