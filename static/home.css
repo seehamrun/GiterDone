@@ -67,7 +67,7 @@ li a:hover {
   width: 100%;
 }
 
-#home {
+/* #home {
   color: white;
 }
 
@@ -81,7 +81,7 @@ li a:hover {
 
 #settings {
   color: white;
-}
+} */
 
 #twitter {
   width: 50px;
@@ -106,7 +106,7 @@ body {
   outline: 10px solid #ffffff;
 }
 
-.tabBar {
+/* .tabBar {
   background-color: white;
 }
 
@@ -148,7 +148,7 @@ body {
   font-size: 30px;
   text-align: center;
   font-family: impact;
-}
+} */
 
 .wrapper {
   display: grid;
