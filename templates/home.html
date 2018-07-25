@@ -6,10 +6,17 @@
   </head>
 
   <body>
-    <a class="logout" href="{{logoutUrl}}">Log Out</a>
     <script src="/static/script.js"></script>
-    <h1 id='app_name'>GET YO WATA UP</h1>
-    <div class="wrapper">
+    <h1 id='app_name'>Water Website</h1>
+    <ul>
+      <li><a href="/" id="home">Home</a></li>
+      <li><a href="/schedule" id="schedule">Schedule</a></li>
+      <li><a href="/history" id="history">History</a></li>
+      <li><a href="/settings" id="settings">Settings</a></li>
+      <li><a class="logout" href="{{logoutUrl}}">Log Out</a></li>
+    </ul>
+    <!-- <h1 id='app_name'>GET YO WATA UP</h1>
+    <!<div class="wrapper">
       <div class="tabBar home">
         <p><a href="/" id="home">Home</a></p>
       </div>
@@ -22,23 +29,26 @@
       <div class="tabBar settings">
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
-    </div>
-    <div class="container">
-      <div id="waterpic">
-        <img src="https://cdn.instructables.com/FU2/Y18R/IDM04U7M/FU2Y18RIDM04U7M.LARGE.jpg"/>
+    </div> -->
+    <div id="background">
+      <div class="container">
+        <div id="waterpic">
+          <!-- <img src="https://cdn.instructables.com/FU2/Y18R/IDM04U7M/FU2Y18RIDM04U7M.LARGE.jpg"/> -->
+        </div>
+        <div>
+          <div id="water">
+            <p>Your goal is % cups of water.</p>
+            <p>You have drank % cups of water.</p>
+            <p>You need % more cups of water to reach your goal.</p>
+          </div>
+          <div id="socials">
+            <a href="http://twitter.com/?status=I DRANK SO MUCH WATER!"><img src="http://www.anthonysgulfport.com/wp-content/uploads/2014/09/twitter-icon-300x300.png" id="twitter"/></a>
+            <a href="https://www.facebook.com/share.php?u="><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png" id="facebook"</a>
+            <a href="https://www.instagram.com"><img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" id="instagram"</a>
+          </div>
+        </div>
       </div>
-      <div id="water">
-        <p>Your goal is % cups of water.</p>
-        <p>You have drank % cups of water.</p>
-        <p>You need % more cups of water to reach your goal.</p>
-        <p>Your Total H2O Points: %</p>
-      </div>
     </div>
-    <div>
-    <a href="http://twitter.com/?status=I DRANK SO MUCH WATER!"><img src="http://www.anthonysgulfport.com/wp-content/uploads/2014/09/twitter-icon-300x300.png" id="twitter"/></a>
-    <a href="https://www.facebook.com/share.php?u="><img src="https://seeklogo.com/images/F/facebook-icon-logo-C61047A9E7-seeklogo.com.png" id="facebook"</a>
-    <a href="https://www.instagram.com"><img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" id="instagram"</a>
-</div>
   </body>
 
 </html>
