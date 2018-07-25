@@ -17,7 +17,7 @@ class WaterDatabase(ndb.Model):
     height = ndb.IntegerProperty()
     incWater = ndb.StringProperty()
     weight = ndb.IntegerProperty()
-    #times = ndb.StringListProperty()
+    times = ndb.StringListProperty()
 
 
 jinja_env = jinja2.Environment(
