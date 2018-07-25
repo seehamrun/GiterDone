@@ -112,5 +112,6 @@ class AddWater(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', IndexHandler),
     ('/schedule', ScheduleHandler),
-    ('/history', HistoryHandler)
+    ('/history', HistoryHandler),
+    ('/settings', SettingsHandler),
 ], debug=True)
