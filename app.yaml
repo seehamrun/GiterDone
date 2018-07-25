@@ -10,8 +10,8 @@ handlers:
   script: main.app
   login: required
 - url: /
-  static_files: static/schedule.html
-  upload: static/schedule.html
+  static_files: static/index.html
+  upload: static/index.html
 - url: /static.*
   static_dir: static
 - url: /.*

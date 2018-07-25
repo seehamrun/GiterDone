@@ -102,10 +102,10 @@ class SettingsHandler(webapp2.RequestHandler):
     def post(self):
         #  1. get all the things from self.request.get()
         name = self.request.get('name')
-        age = self.request.get('age')
-        height = self.request.get('height')
-        weight = self.request.get('weight')
-        totalWater = self.request.get('totalWater')
+        age = int(self.request.get('age'))
+        height = int(self.request.get('height'))
+        weight = int(self.request.get('weight'))
+        totalWater = int(self.request.get('totalWater'))
         incWater = self.request.get('incWater')
         self.response.headers['Content-Type'] = 'text/html'
         # make a new WaterDatabase using the things from 1
@@ -113,10 +113,8 @@ class SettingsHandler(webapp2.RequestHandler):
 
         # put that info in the db
         newentry.put()
-        data=  {
-            'name': name
-            }
-        self.response.write(template.render(data))
+        self.redirect('/history')
+
 
 
 class AddWater(webapp2.RequestHandler):
