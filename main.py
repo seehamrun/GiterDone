@@ -46,7 +46,7 @@ class ScheduleHandler(webapp2.RequestHandler):
             times = results[0].times
         else:
             totalWater = 0
-            amtWater = 1 
+            amtWater = 1
             times = []
         userTemp = self.request.get("temp")
         logging.info("This is user temp")
