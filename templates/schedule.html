@@ -4,6 +4,7 @@
       <link rel="stylesheet" href="static/schedule.css"></link>
       <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src = "/static/api.js"></script>
+      <script src = "/static/schedule.js"></script>
 
   </head>
 
@@ -27,14 +28,13 @@
     <form method="post">
 
       {% for number in range (0, amtWater) %}
-      <input type='checkbox' name="{{x}}">I have drank {{ounces}}oz by {{x}}<br>
+      <input type='checkbox' name="{{x}}"><br>I have drank {{totalWater}}oz by {{x}}<br>
       {% endfor %}
       <input type="submit" id="submit" value="Update">
     </form>
         <div id="temp"></div>
         <div id="condition"></div>
         <div id="pic"></div>
-        <script src = "/static/schedule.js"></script>
   </body>
 
 
