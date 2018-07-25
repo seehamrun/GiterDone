@@ -2,9 +2,9 @@ import webapp2
 import logging
 import jinja2
 import os
+
 from google.appengine.ext import ndb
 from google.appengine.api import users
-
 from google.appengine.api import urlfetch
 
 class WaterDatabase(ndb.Model):
@@ -13,24 +13,18 @@ class WaterDatabase(ndb.Model):
     date = ndb.StringProperty()
     incWater = ndb.IntegerProperty()
 
-class amtOfTimes:
-     def __init__(name, totalWater, date, incWater):
-         self.name = name
-         self.totalWater = totalWater
-         self.date = date
-         self.incWater = incWater
 
+jinja_env = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True)
 
-class DatabaseForCoolPeople(ndb.Model):
-    name = ndb.StringProperty()
-    AMtOfWater = ndb.IntegerProperty()
-    date = ndb.StringProperty()
 
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
         logging.info('current user is %s' % (user.nickname()))
-        template = jinja_env.get_template('templates/index.html')
+        template = jinja_env.get_template('templates/home.html')
         data = {
         'user_nickname': user.nickname(),
           'logoutUrl': users.create_logout_url('/')
@@ -38,7 +32,7 @@ class IndexHandler(webapp2.RequestHandler):
         return self.response.write(template.render(data))
 
 class ScheduleHandler(webapp2.RequestHandler):
-def get(self):
+    def get(self):
         template = jinja_env.get_template('templates/schedule.html')
         return self.response.write(template.render())
         self.response.write(template.render())
@@ -50,7 +44,7 @@ def get(self):
 
 
 class HistoryHandler(webapp2.RequestHandler):
-def get(self):
+    def get(self):
         template = jinja_env.get_template('templates/history.html')
         return self.response.write(template.render())
 
