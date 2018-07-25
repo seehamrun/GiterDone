@@ -7,11 +7,17 @@ from google.appengine.ext import ndb
 from google.appengine.api import users
 from google.appengine.api import urlfetch
 
+
+
 class WaterDatabase(ndb.Model):
     name = ndb.StringProperty()
     totalWater = ndb.IntegerProperty()
-    date = ndb.StringProperty()
-    incWater = ndb.IntegerProperty()
+    age = ndb.IntegerProperty()
+    date = ndb.IntegerProperty()
+    height = ndb.IntegerProperty()
+    incWater = ndb.StringProperty()
+    weight = ndb.IntegerProperty()
+    #times = ndb.StringListProperty()
 
 
 jinja_env = jinja2.Environment(
@@ -71,14 +77,6 @@ class SettingsHandler(webapp2.RequestHandler):
         reminderTime11 = self.request.get('reminderTime11')
         reminderTime12 = self.request.get('reminderTime12')
 
-
-        # if numberReminderTimes == "1":
-        #     print(reminderTime1)
-        # elif numberReminderTimes == "2":
-        #     print(reminderTime1 + reminderTime2)
-        # else:
-        #     print("This isn't working")
-
         userInput = {
             "userName": name,
             "userAge": age,
@@ -100,6 +98,26 @@ class SettingsHandler(webapp2.RequestHandler):
             "reminderTime12": reminderTime12,
         }
         return self.response.write(template.render(userInput))
+
+    def post(self):
+        #  1. get all the things from self.request.get()
+        name = self.request.get('name')
+        age = self.request.get('age')
+        height = self.request.get('height')
+        weight = self.request.get('weight')
+        totalWater = self.request.get('totalWater')
+        incWater = self.request.get('incWater')
+        self.response.headers['Content-Type'] = 'text/html'
+        # make a new WaterDatabase using the things from 1
+        newentry = WaterDatabase(name=name, age=(age), height=(height), weight=(weight), totalWater=(totalWater), incWater=(incWater))
+
+        # put that info in the db
+        newentry.put()
+        data=  {
+            'name': name
+            }
+        self.response.write(template.render(data))
+
 
 class AddWater(webapp2.RequestHandler):
     def post(self):

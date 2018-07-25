@@ -63,13 +63,13 @@
         </tr>
       </table> -->
 
-    <form id="editUserPreferences">
+    <form method="post" id="editUserPreferences">
       <div>Name: <input type='text' name="name" value='{{userName}}'></div>
       <div>Age: <input type='text' name="age" value='{{userAge}}'></div>
       <div>Height: <input type='text' name="height" value='{{userHeight}}'></div>
       <div>Weight: <input type='text' name="weight" value='{{userWeight}}'></div>
-      <div>Water Goal: <input type='text' name="water_goal" value='{{userWaterGoal}}'></div>
-      <div>Number of Reminder Times: <select id="reminder"name = "numberReminderTimes" onchange="showReminderTimes(this.value)">
+      <div>Water Goal: <input type='text' name="totalWater" value='{{userWaterGoal}}'></div>
+      <div>Number of Reminder Times: <select id="reminder"name = "incWater" onchange="showReminderTimes(this.value)">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
