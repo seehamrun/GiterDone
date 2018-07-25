@@ -78,6 +78,7 @@ class SettingsHandler(webapp2.RequestHandler):
         reminderTime11 = self.request.get('reminderTime11')
         reminderTime12 = self.request.get('reminderTime12')
 
+
         # if numberReminderTimes == "1":
         #     print(reminderTime1)
         # elif numberReminderTimes == "2":
