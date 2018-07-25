@@ -51,6 +51,7 @@ class ScheduleHandler(webapp2.RequestHandler):
 
         if (userTemp>80) :
             logging.info("its hot")
+            print("It is hot.")
 
         return self.response.write(template.render(value))
 
