@@ -39,14 +39,24 @@ class IndexHandler(webapp2.RequestHandler):
 
 class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
+        results = WaterDatabase.query().fetch()
+        if (len(results) > 0):
+            totalWater = results[0].totalWater
+            amtWater = results[0].incWater
+            times = results[0].times
+        else:
+            totalWater = 0
+            amtWater = 1
+            times = []
         userTemp = self.request.get("temp")
         logging.info("This is user temp")
         logging.info(userTemp)
-
+        ounces = totalWater / amtWater
         template = jinja_env.get_template('templates/schedule.html')
         value = {
-            "amtWater" : 5
-
+            "amtWater" : amtWater,
+            "ounces" : ounces,
+            "x" : times
         }
 
         if (userTemp>80) :
