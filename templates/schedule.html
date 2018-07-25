@@ -9,9 +9,15 @@
   </head>
 
   <body>
-    <a class="logout" href="{{logoutUrl}}">Log Out</a>
     <h1 id="schedule_header">Schedule</h1>
-    <div class="wrapper">
+    <ul>
+      <li><a href="/" id="home">Home</a></li>
+      <li><a href="/schedule" id="schedule">Schedule</a></li>
+      <li><a href="/history" id="history">History</a></li>
+      <li><a href="/settings" id="settings">Settings</a></li>
+      <li><a class="logout" href="{{logoutUrl}}">Log Out</a></li>
+    </ul>
+    <!-- <div class="wrapper">
       <div class="tabBar home">
         <p><a href="/" id="home">Home</a></p>
       </div>
@@ -24,11 +30,11 @@
       <div class="tabBar settings">
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
-    </div>
+    </div> -->
     <form method="post">
 
-      {% for number in range (0, amtWater) %}
-      <input type='checkbox' name="{{x}}"><br>I have drank {{totalWater}}oz by {{x}}<br>
+      {% for i in range(0, amtWater) %}
+      <input type='checkbox'><br>I have drank {{ounces}}oz by {{x[i]}}<br>
       {% endfor %}
       <input type="submit" id="submit" value="Update">
     </form>
