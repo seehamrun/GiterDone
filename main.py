@@ -17,7 +17,7 @@ class WaterDatabase(ndb.Model):
     height = ndb.IntegerProperty()
     incWater = ndb.StringProperty()
     weight = ndb.IntegerProperty()
-    #times = ndb.StringListProperty()
+    times = ndb.StringListProperty()
 
 
 jinja_env = jinja2.Environment(
@@ -118,8 +118,10 @@ class SettingsHandler(webapp2.RequestHandler):
         totalWater = int(self.request.get('totalWater'))
         incWater = self.request.get('incWater')
         self.response.headers['Content-Type'] = 'text/html'
+        for i in range(numberReminderTimes):
+            times.append(self.request.get("reminderTime" + str(i+1)))
         # make a new WaterDatabase using the things from 1
-        newentry = WaterDatabase(name=name, age=int(age), height=height, weight=weight, totalWater=totalWater, incWater=incWater)
+        newentry = WaterDatabase(name=name, age=int(age), height=height, weight=weight, totalWater=totalWater, incWater=incWater, times = times)
 
         # put that info in the db
         newentry.put()
