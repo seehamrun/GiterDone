@@ -24,9 +24,16 @@
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
     </div>
+<<<<<<< HEAD
     <form  onSubmit="submitHistory()" id="historyform">
       {% for num in range(5) %}
       <div class="checked" id="checked"></div>
+=======
+    <form method="post">
+
+      {% for x in times %}
+      <input type='checkbox' name="{{x}}">I have drank {{cool}}oz by {{x}}<br>
+>>>>>>> e3e0ac71120f4f281aeef703f0271df75997a707
       {% endfor %}
       <input type="submit" id="submit" value="Update">
     </form>

@@ -4,13 +4,6 @@ import jinja2
 import os
 from google.appengine.ext import ndb
 from google.appengine.api import users
-
-
-class DatabaseForCoolPeople(ndb.Model):
-    name = ndb.StringProperty()
-    AMtOfWater = ndb.IntegerProperty()
-    date = ndb.StringProperty()
-
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -25,7 +18,6 @@ class IndexHandler(webapp2.RequestHandler):
 class ScheduleHandler(webapp2.RequestHandler):
 def get(self):
         template = jinja_env.get_template('templates/schedule.html')
-        return self.response.write(template.render())
 
 class HistoryHandler(webapp2.RequestHandler):
 def get(self):
