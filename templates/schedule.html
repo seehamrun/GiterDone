@@ -24,9 +24,9 @@
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
     </div>
-    <form action="main.py" method="post">
+    <form  onSubmit="submitHistory()" id="historyform">
       {% for num in range(5) %}
-      <div class="checked"></div>
+      <div class="checked" id="checked"></div>
       {% endfor %}
       <input type="submit" id="submit" value="Update">
     </form>
