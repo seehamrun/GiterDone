@@ -17,7 +17,7 @@ class WaterDatabase(ndb.Model):
     height = ndb.IntegerProperty()
     incWater = ndb.StringProperty()
     weight = ndb.IntegerProperty()
-    times = ndb.StringListProperty()
+    # times = ndb.StringListProperty()
 
 
 jinja_env = jinja2.Environment(
@@ -49,12 +49,10 @@ class ScheduleHandler(webapp2.RequestHandler):
 
         }
 
-        if (userTemp>80):
+        if (userTemp>80) :
             logging.info("its hot")
 
         return self.response.write(template.render(value))
-
-
 
 
 
