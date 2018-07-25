@@ -87,7 +87,7 @@ table#historyTable {
   font-family: impact;
   text-align: center;
   margin-top: 10px;
-  background-color: #33ccff;
+  background-color: #cc99ff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 tr:hover {background-color: #ccf5ff;}
