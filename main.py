@@ -62,7 +62,7 @@ class SettingsHandler(webapp2.RequestHandler):
         age = self.request.get('age')
         height = self.request.get('height')
         weight = self.request.get('weight')
-        water_goal = self.request.get('water_goal')
+        totalWater = self.request.get('totalWater')
         numberReminderTimes = self.request.get('numberReminderTimes')
         reminderTime1 = self.request.get('reminderTime1')
         reminderTime2 = self.request.get('reminderTime2')
@@ -80,9 +80,9 @@ class SettingsHandler(webapp2.RequestHandler):
         userInput = {
             "userName": name,
             "userAge": age,
-            "userHeight": height,
+                "userHeight": height,
             "userWeight": weight,
-            "userWaterGoal": water_goal,
+            "usertotalWater": totalWater,
             "numberReminderTimes": numberReminderTimes,
             "reminderTime1": reminderTime1,
             "reminderTime2": reminderTime2,
@@ -109,7 +109,7 @@ class SettingsHandler(webapp2.RequestHandler):
         incWater = self.request.get('incWater')
         self.response.headers['Content-Type'] = 'text/html'
         # make a new WaterDatabase using the things from 1
-        newentry = WaterDatabase(name=name, age=(age), height=(height), weight=(weight), totalWater=(totalWater), incWater=(incWater))
+        newentry = WaterDatabase(name=name, age=age, height=height, weight=weight, totalWater=totalWater, incWater=incWater)
 
         # put that info in the db
         newentry.put()
