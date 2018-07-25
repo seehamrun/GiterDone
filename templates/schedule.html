@@ -40,6 +40,18 @@
           <script src = "/static/schedule.js"></script>
       </div>
   </div>
+    <form  onSubmit="submitHistory()" id="historyform">
+    <form action="static/schedule.js" method="post">
+    <form action="main.py" method="post">
+      {% for num in range(5) %}
+      <div class="checked"></div>
+      {% endfor %}
+      <input type="submit" id="submit" value="Update">
+    </form>
+        <div id="temp"></div>
+        <div id="condition"></div>
+        <div id="pic"></div>
+        <script src = "/static/schedule.js"></script>
   </body>
 
 
