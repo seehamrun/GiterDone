@@ -24,16 +24,22 @@
       <p><a href="/settings" id="settings">Settings</a></p>
       </div>
     </div>
-    <form action="main.py" method="post">
-      {% for num in range(5) %}
-      <div class="checked"></div>
-      {% endfor %}
-      <input type="submit" id="submit" value="Update">
-    </form>
-        <div id="temp"></div>
-        <div id="condition"></div>
-        <div id="pic"></div>
-        <script src = "/static/schedule.js"></script>
+    <div class="wrapper2">
+      <form action="main.py" method="post" id="checkboxes">
+        <p class="titles">Your Daily Schedule: </p>
+        {% for num in range(5) %}
+        <div class="checked"></div>
+        {% endfor %}
+        <input type="submit" id="submit" value="Update">
+      </form>
+      <div class="weather">
+          <p class="titles">Weather Update: </p>
+          <div id="temp"></div>
+          <div id="condition"></div>
+          <div id="pic"></div>
+          <script src = "/static/schedule.js"></script>
+      </div>
+  </div>
   </body>
 
 

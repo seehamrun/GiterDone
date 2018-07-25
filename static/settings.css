@@ -79,6 +79,13 @@
   grid-template-rows: 2fr
 }
 
-#inputs {
+#reminderTimes {
   visibility: hidden;
+}
+
+#editUserPreferences {
+  color: #33ccff;
+  font-size: 20px;
+  font-family: impact;
+  margin: 10px;
 }
