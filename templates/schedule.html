@@ -26,7 +26,7 @@
     </div>
     <form method="post">
 
-      {% for x in times %}
+      {% for number in range (0, amtWater) %}
       <input type='checkbox' name="{{x}}">I have drank {{cool}}oz by {{x}}<br>
       {% endfor %}
       <input type="submit" id="submit" value="Update">
