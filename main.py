@@ -14,7 +14,7 @@ class WaterDatabase(ndb.Model):
     totalWater = ndb.IntegerProperty()
     age = ndb.IntegerProperty()
     date = ndb.IntegerProperty()
-    height = ndb.StringProperty()
+    height = ndb.IntegerProperty()
     incWater = ndb.StringProperty()
     weight = ndb.IntegerProperty()
     #times = ndb.StringListProperty()
