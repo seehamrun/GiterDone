@@ -14,7 +14,7 @@ class WaterDatabase(ndb.Model):
     totalWater = ndb.IntegerProperty()
     age = ndb.IntegerProperty()
     date = ndb.IntegerProperty()
-    height = ndb.IntegerProperty()
+    height = ndb.StringProperty()
     incWater = ndb.StringProperty()
     weight = ndb.IntegerProperty()
     #times = ndb.StringListProperty()
@@ -80,7 +80,7 @@ class SettingsHandler(webapp2.RequestHandler):
         userInput = {
             "userName": name,
             "userAge": age,
-                "userHeight": height,
+            "userHeight": height,
             "userWeight": weight,
             "usertotalWater": totalWater,
             "numberReminderTimes": numberReminderTimes,
@@ -109,7 +109,7 @@ class SettingsHandler(webapp2.RequestHandler):
         incWater = self.request.get('incWater')
         self.response.headers['Content-Type'] = 'text/html'
         # make a new WaterDatabase using the things from 1
-        newentry = WaterDatabase(name=name, age=age, height=height, weight=weight, totalWater=totalWater, incWater=incWater)
+        newentry = WaterDatabase(name=name, age=int(age), height=height, weight=weight, totalWater=totalWater, incWater=incWater)
 
         # put that info in the db
         newentry.put()
