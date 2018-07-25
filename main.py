@@ -2,11 +2,6 @@ import webapp2
 import logging
 import jinja2
 import os
-<<<<<<< HEAD
-=======
-import database
-
->>>>>>> parent of 991a8ea... h
 from google.appengine.ext import ndb
 from google.appengine.api import users
 class IndexHandler(webapp2.RequestHandler):
