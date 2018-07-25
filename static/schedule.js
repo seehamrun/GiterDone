@@ -16,11 +16,8 @@ var times = ["10AM", "12PM", "2PM", "4PM", "6PM"]
 console.log(checkedDiv)
 var i = 0;
 checkedDiv.forEach(function(element) {
-  var inputSchedule = document.createElement('input');
-    inputSchedule.type = 'checkbox';
-    //make the 5 individual labels to sync to the html
-    inputSchedule.innerHTML = 'I have drank ${cool}oz by ${times[i]}';
-  element.appendChild(inputSchedule);
+  var inputSchedule = `<input type='checkbox'>I have drank ${cool}oz by ${times[i]}<br>`
+  element.innerHTML = inputSchedule;
   i++;
 });
 
@@ -39,14 +36,11 @@ checkedDiv.forEach(function(element) {
     jQuery.post("/history", {url: waterdatabaseUrl}, doneCallback);
   }
 
-  function submitHistory() {
-    var inputBox = document.getElementById('historyform')
-    //{var data= }
+  function submitClick() {
+    var inputBox = document.querySelector('#queryBox')
     var userInput = userInput + inputBox.value
     addWaterDatabase(userInput, displayResult)
   }
-
-
 
 
   window.addEventListener('load', () => {
