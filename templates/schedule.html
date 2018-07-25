@@ -25,8 +25,9 @@
       </div>
     </div>
     <form action="main.py" method="post">
-      {% for num in range(5) %}
-      <div class="checked"></div>
+
+      {% for x in times %}
+      <input type='checkbox' name="{{x}}">I have drank {{cool}}oz by {{x}}<br>
       {% endfor %}
       <input type="submit" id="submit" value="Update">
     </form>
