@@ -46,6 +46,7 @@ class ScheduleHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/schedule.html')
         value = {
             "amtWater" : 5
+
         }
         return self.response.write(template.render(value))
 
