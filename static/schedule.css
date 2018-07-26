@@ -113,13 +113,13 @@ body {
   font-family: impact;
 } */
 
-.wrapper {
+/* .wrapper {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 2fr;
   grid-template-rows: 2fr
-}
+} */
 
-.wrapper2 {
+.wrapper {
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 2fr
@@ -129,22 +129,16 @@ body {
   text-align: center;
 }
 
-.titles {
-  color: black;
-  font-size: 30px;
-  font-family: impact;
-}
-
 #temp {
-  color: #33ccff;
-  font-size: 15px;
-  font-family: impact;
+    font-size: 15px;
+    font-family: tahoma;
+    color: #000099;
 }
 
 #condition {
-  color: #33ccff;
-  font-size: 20px;
-  font-family: impact;
+  font-size: 25px;
+  font-family: tahoma;
+  color: #000099;
 }
 
 #pic {
@@ -153,7 +147,7 @@ body {
 
 #checkboxes {
   font-size: 20px;
-  font-family: impact;
-  color: #33ccff;
+  font-family: tahoma;
+  color: #000099;
   margin-left: 20px;
 }

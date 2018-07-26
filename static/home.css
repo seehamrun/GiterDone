@@ -69,7 +69,7 @@ li a:hover {
 }
 
 .measureList {
-  height: 250px;
+  height: 275px;
   width: 100%;
   display: flex;
   flex-direction: column;

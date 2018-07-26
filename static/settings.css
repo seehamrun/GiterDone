@@ -1,16 +1,50 @@
-.logout {
+/* .logout {
   float: right;
   font-family: impact;
   color: #33ccff;
+} */
+
+.tabBar {
+    list-style-type: none;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #000099;
+    text-align: center;
+    border-radius: 20px;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #ffffff;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: tahoma;
+  font-size: 20px;
+}
+
+li:last-child {
+    border-right: none;
+    float: right;
+    border-left: 1px solid #ffffff
+}
+
+li a:hover {
+  background-color: #4d79ff;
 }
 
 #settings_header {
   font-size: 50px;
-  color: #33ccff;
-  text-align: center;
-  font-family: impact;
+  color: #81c1fc;
+  text-align: left;
+  font-family: tahoma;
   margin: 5px;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 3px 3px #d6e0f5;
 }
 
 #home {
@@ -29,7 +63,7 @@
   color: white;
 }
 
-.tabBar {
+/* .tabBar {
   background-color: white;
 }
 
@@ -77,6 +111,12 @@
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 2fr;
   grid-template-rows: 2fr
+} */
+
+body {
+  border: 15px solid #d6e0f5;
+  padding: 10px;
+  outline: 10px solid #ffffff;
 }
 
 #reminderTimes {
@@ -84,8 +124,8 @@
 }
 
 #editUserPreferences {
-  color: #33ccff;
+  color: #000099;
   font-size: 20px;
-  font-family: impact;
+  font-family: tahoma;
   margin: 10px;
 }
