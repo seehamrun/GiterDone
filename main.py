@@ -2,6 +2,7 @@ import webapp2
 import logging
 import jinja2
 import os
+import time
 
 from google.appengine.ext import ndb
 from google.appengine.api import users
@@ -102,6 +103,7 @@ class ScheduleHandler(webapp2.RequestHandler):
         results[0].put()
         #newentry = WaterDatabase(currentAmt = currentAmt)
         #newentry.put()
+        time.sleep(1)
         self.redirect('/history')
 
 
