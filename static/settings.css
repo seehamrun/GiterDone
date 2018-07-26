@@ -28,11 +28,6 @@ li a {
   font-size: 20px;
 }
 
-li:last-child {
-    border-right: none;
-    float: right;
-    border-left: 1px solid #ffffff
-}
 
 li a:hover {
   background-color: #4d79ff;
