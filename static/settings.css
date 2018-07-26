@@ -36,22 +36,6 @@ li a:hover {
   text-shadow: 3px 3px #d6e0f5;
 }
 
-#home {
-  color: white;
-}
-
-#schedule {
-  color: white;
-}
-
-#history {
-  color: white;
-}
-
-#settings {
-  color: white;
-}
-
 body {
   border: 15px solid #d6e0f5;
   padding: 10px;
