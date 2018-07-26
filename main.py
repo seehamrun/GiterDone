@@ -30,12 +30,21 @@ jinja_env = jinja2.Environment(
 
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
-        user = users.get_current_user()
-        logging.info('current user is %s' % (user.nickname()))
+        currentUser = users.get_current_user().nickname()
+        results = WaterDatabase.query(WaterDatabase.user == currentUser).fetch()
+        if (len(results) > 0):
+            totalWater = results[0].totalWater
+            currentAmt = results[0].currentAmt
+        else:
+            totalWater = 0
+            currentAmt = 0
+        #logging.info('current user is %s' % (user.nickname()))
         template = jinja_env.get_template('templates/home.html')
         data = {
-        'user_nickname': user.nickname(),
-          'logoutUrl': users.create_logout_url('/')
+        'user_nickname': currentUser,
+        'logoutUrl': users.create_logout_url('/'),
+        'totalWater': totalWater,
+        'currentAmt': currentAmt
         }
         return self.response.write(template.render(data))
 
