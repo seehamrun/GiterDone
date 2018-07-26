@@ -14,7 +14,8 @@ fetch("https://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weathe
       // })
     })
   });
-
+  // if (temp < 80) {
+  //     document.getElementById("demo").innerHTML = "It is hot outside, you should drink more water!";
 
 //"<input type='checkbox'>I have drank"+ %s +"oz by 10AM<br>" % (12)
   // fetch("http://api.apixu.com/v1/current.json?key=" + weatherApi + "&q=60607")
