@@ -34,16 +34,17 @@
     </div> -->
     <div class="wrapper">
       <div id="checkboxes">
-        <h1>Your Daily Schedule</h1>
+        <h1 class="titles">Your Daily Schedule: </h1>
+        <h5>Date: </h5>
         <form method="post">
           {% for i in range(0, amtWater) %}
-            <input type='checkbox'><br>I have drank {{ounces}}oz by {{x[i]}}<br>
+            <input type='checkbox'><br>I drank {{ounces}} oz by {{x[i]}}<br>
           {% endfor %}
           <input type="submit" id="submit" value="Update">
         </form>
       </div>
       <div class="weather">
-        <h1>Today's Weather: </h1>
+        <h1 class="titles">Today's Weather: </h1>
         <div id="temp"></div>
         <div id="condition"></div>
         <div id="pic"></div>

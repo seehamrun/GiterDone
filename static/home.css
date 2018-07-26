@@ -66,6 +66,7 @@ li a:hover {
   font-family: tahoma;
   font-size: 23px;
   margin-left: 0;
+  text-shadow: 2px 2px #d6e0f5;
 }
 
 .measureList {
