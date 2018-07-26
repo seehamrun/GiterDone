@@ -54,39 +54,39 @@ body {
 
 .name {
   font-size: 30px;
-  color: #81c1fc;
+  color: #000099;
   font-family: tahoma;
   text-shadow: 3px 3px #d6e0f5;
 }
 
 #sydney {
-  background-color: rgba(204, 239, 255, 0.5);
+  background-color: rgba(204, 239, 255, 0.75);
   margin: 20px;
-  border: 10px solid #000099;
+  border: 10px solid #81c1fc;
   padding: 5px;
   border-radius: 20px;
 }
 
 #nicole {
-  background-color: rgba(204, 239, 255, 0.5);
+  background-color: rgba(204, 239, 255, 0.75);
   margin: 20px;
-  border: 10px solid #000099;
+  border: 10px solid #81c1fc;
   padding: 5px;
   border-radius: 20px;
 }
 
 #david {
-  background-color: rgba(204, 239, 255, 0.5);
+  background-color: rgba(204, 239, 255, 0.75);
   margin: 20px;
-  border: 10px solid #000099;
+  border: 10px solid #81c1fc;
   padding: 5px;
   border-radius: 20px;
 }
 
 #isaac {
-  background-color: rgba(204, 239, 255, 0.5);
+  background-color: rgba(204, 239, 255, 0.75);
   margin: 20px;
-  border: 10px solid #000099;
+  border: 10px solid #81c1fc;
   padding: 5px;
   border-radius: 20px;
 }
