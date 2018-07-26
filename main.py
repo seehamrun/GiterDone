@@ -84,10 +84,13 @@ class ScheduleHandler(webapp2.RequestHandler):
             "user_exists" : len(results)>0
 
         }
-        logging.info(value)
-        # if (userTemp>80) :
+        # logging.info(value)
+        # if (currentTemp>80) :
         #     logging.info("its hot")
-        #     print("It is hot.")
+        #     import win32api
+        #
+        #     win32api.MessageBox(0, 'hello', 'title')
+
         return self.response.write(template.render(value))
 
     def post(self):
