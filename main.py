@@ -18,6 +18,7 @@ class WaterDatabase(ndb.Model):
     incWater = ndb.IntegerProperty()
     weight = ndb.IntegerProperty()
     times = ndb.StringProperty(repeated=True)
+    currentAmt = ndb.IntegerProperty()
 
 
 jinja_env = jinja2.Environment(
@@ -63,7 +64,7 @@ class ScheduleHandler(webapp2.RequestHandler):
             "amtWater" : amtWater,
             "ounces" : ounces,
             "x" : times,
-            
+
         }
 
         if (userTemp>80) :
@@ -97,14 +98,25 @@ class ScheduleHandler(webapp2.RequestHandler):
 
 
 
+
 class HistoryHandler(webapp2.RequestHandler):
     def get(self):
         results = WaterDatabase.query().fetch()
-        if(len(results) > 0):
-            totalWater = results[0].usertotalWater
+        if (len(results) > 0):
+            totalWater = results[0].totalWater
             amtWater = results[0].incWater
             ounces = totalWater / amtWater
-
+        else:
+            totalWater = 0
+            amtWater = 0
+            ounces = totalWater / (amtWater + 1)
+        checks = self.request.get('checks')
+        template = jinja_env.get_template('templates/history.html')
+        value = {
+            "totalWater" : totalWater,
+            "ounces" : ounces
+        }
+        return self.response.write(template.render(value))
 
 
 
