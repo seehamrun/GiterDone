@@ -63,7 +63,7 @@ class ScheduleHandler(webapp2.RequestHandler):
             "amtWater" : amtWater,
             "ounces" : ounces,
             "x" : times,
-            #"values" : values
+            
         }
 
         if (userTemp>80) :
@@ -75,7 +75,23 @@ class ScheduleHandler(webapp2.RequestHandler):
         self.redirect('/history')
 
     def post(self):
-        logging.info(self.request.get("value2"))
+        #logging.info(self.request.get("value2"))
+        results = WaterDatabase.query().fetch()
+        if (len(results) > 0):
+            totalWater = results[0].totalWater
+            amtWater = results[0].incWater
+            ounces = totalWater / amtWater
+        else:
+            totalWater = 0
+            amtWater = 0
+            ounces = totalWater / (amtWater + 1)
+        currentAmt = 0
+
+        for i in range(1, amtWater):
+            if(self.request.get("value" + str(i)) == ounces):
+                currentAmt = currentAmt + ounces
+        newentry = WaterDatabase(currentAmt = currentAmt)
+        newentry.put()
         self.redirect('/history')
 
 

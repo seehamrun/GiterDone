@@ -48,7 +48,7 @@ body {
 .wrapper {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  grid-template-rows: 250px 250px;
+  grid-template-rows: 2fr 2fr;
   text-align: center;
 }
 
@@ -62,28 +62,33 @@ body {
 #sydney {
   background-color: rgba(129, 193, 252, 0.75);
   margin: 20px;
-  border: 10px solid #d6e0f5;
+  border: 3px solid #d6e0f5;
   padding: 5px;
+}
+
+#sydneypic {
+  height: 200px;
+  width: auto;
 }
 
 #nicole {
   background-color: rgba(129, 193, 252, 0.75);
   margin: 20px;
-  border: 10px solid #d6e0f5;
+  border: 3px solid #d6e0f5;
   padding: 5px;
 }
 
 #david {
   background-color: rgba(129, 193, 252, 0.75);
   margin: 20px;
-  border: 10px solid #d6e0f5;
+  border: 3px solid #d6e0f5;
   padding: 5px;
 }
 
 #isaac {
   background-color: rgba(129, 193, 252, 0.75);
   margin: 20px;
-  border: 10px solid #d6e0f5;
+  border: 3px solid #d6e0f5;
   padding: 5px;
 }
 

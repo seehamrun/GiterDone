@@ -12,6 +12,6 @@ function showReminderTimes(num){
 
 $(function(){
     $('.water').animate({
-        height: "80%"
+        height: "100%"
     }, 2000)
 })
