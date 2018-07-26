@@ -92,7 +92,7 @@ body {
   padding: 5px;
 }
 
-p {
-  font-family: tahoma;
-  font-size: 18px;
+#nicolepic {
+  height: 100px;
+  width: 100px;
 }
