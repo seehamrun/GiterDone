@@ -67,10 +67,15 @@ class ScheduleHandler(webapp2.RequestHandler):
 
 
 
-
 class HistoryHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/history.html')
+        return self.response.write(template.render())
+
+
+class AboutUsHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/aboutus.html')
         return self.response.write(template.render())
 
 
@@ -152,4 +157,5 @@ app = webapp2.WSGIApplication([
     ('/schedule', ScheduleHandler),
     ('/history', HistoryHandler),
     ('/settings', SettingsHandler),
+    ('/aboutus', AboutUsHandler)
 ], debug=True)
