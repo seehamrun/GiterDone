@@ -62,7 +62,7 @@ class ScheduleHandler(webapp2.RequestHandler):
             "values" : list,
             "amtWater" : amtWater,
             "ounces" : ounces,
-            "x" : times
+            "x" : times,
             "values" : values
         }
 
@@ -83,7 +83,8 @@ class ScheduleHandler(webapp2.RequestHandler):
 
 class HistoryHandler(webapp2.RequestHandler):
     def get(self):
-        results = WaterDatabase.query().fetch()        if(len(results) > 0):
+        results = WaterDatabase.query().fetch()
+        if(len(results) > 0):
             totalWater = results[0].usertotalWater
             amtWater = results[0].incWater
             ounces = totalWater / amtWater
