@@ -1,9 +1,3 @@
-/* .logout {
-  float: right;
-  font-family: impact;
-  color: #33ccff;
-} */
-
 .tabBar {
     list-style-type: none;
     padding: 10px;
@@ -75,7 +69,8 @@ li a:hover {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  margin-top: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .percent {
@@ -89,22 +84,6 @@ li a:hover {
   right: -25;
   width: 100%;
 }
-
-/* #home {
-  color: white;
-}
-
-#schedule {
-  color: white;
-}
-
-#history {
-  color: white;
-}
-
-#settings {
-  color: white;
-} */
 
 #twitter {
   width: 50px;
@@ -151,50 +130,6 @@ body {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-
-/* .tabBar {
-  background-color: white;
-}
-
-.home {
-  background-color: #33ccff;
-  border: white;
-  border-radius: 10px;
-  margin: 5px;
-  font-size: 30px;
-  text-align: center;
-  font-family: impact;
-}
-
-.schedule {
-  background-color: #33ccff;
-  border: white;
-  border-radius: 10px;
-  margin: 5px;
-  font-size: 30px;
-  text-align: center;
-  font-family: impact;
-}
-
-.history {
-  background-color: #33ccff;
-  border: white;
-  border-radius: 10px;
-  margin: 5px;
-  font-size: 30px;
-  text-align: center;
-  font-family: impact;
-}
-
-.settings {
-  background-color: #33ccff;
-  border: white;
-  border-radius: 10px;
-  margin: 5px;
-  font-size: 30px;
-  text-align: center;
-  font-family: impact;
-} */
 
 .wrapper {
   display: grid;

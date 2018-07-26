@@ -22,11 +22,11 @@ li a {
   font-size: 20px;
 }
 
-li:last-child {
-    border-right: none;
-    float: right;
-    border-left: 1px solid #ffffff
+
+li a:hover {
+  background-color: #4d79ff;
 }
+
 
 #aboutus_header {
   font-size: 50px;
@@ -35,4 +35,54 @@ li:last-child {
   font-family: tahoma;
   margin: 5px;
   text-shadow: 3px 3px #d6e0f5;
+}
+
+body {
+  background-image: url(http://www.chrisnuzzaco.com/couch/uploads/image/gallery/water_wave_white_background.jpg);
+  background-size: cover;
+  border: 15px solid #d6e0f5;
+  padding: 10px;
+  outline: 10px solid #ffffff;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 250px 250px;
+  text-align: center;
+}
+
+.name {
+  font-size: 30px;
+  color: #000099;
+  font-family: tahoma;
+  text-shadow: 3px 3px #d6e0f5;
+}
+
+#sydney {
+  background-color: rgba(129, 193, 252, 0.75);
+  margin: 20px;
+  border: 10px solid #d6e0f5;
+  padding: 5px;
+}
+
+#nicole {
+  background-color: rgba(129, 193, 252, 0.75);
+  margin: 20px;
+  border: 10px solid #d6e0f5;
+  padding: 5px;
+}
+
+#david {
+  background-color: rgba(129, 193, 252, 0.75);
+  margin: 20px;
+  border: 10px solid #d6e0f5;
+  padding: 5px;
+}
+
+#isaac {
+  background-color: rgba(129, 193, 252, 0.75);
+  margin: 20px;
+  border: 10px solid #d6e0f5;
+  padding: 5px;
 }
