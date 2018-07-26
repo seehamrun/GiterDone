@@ -43,66 +43,6 @@ body {
   outline: 10px solid #ffffff;
 }
 
-/* #home {
-  color: white;
-}
-
-#schedule {
-  color: white;
-}
-
-#history {
-  color: white;
-}
-
-#settings {
-  color: white;
-}
-
-.tabBar {
-  background-color: white;
-}
-
-.home {
-  background-color: #33ccff;
-  border: white;
-  border-radius: 10px;
-  margin: 5px;
-  font-size: 30px;
-  text-align: center;
-  font-family: impact;
-}
-
-.schedule {
-  background-color: #33ccff;
-  border: white;
-  border-radius: 10px;
-  margin: 5px;
-  font-size: 30px;
-  text-align: center;
-  font-family: impact;
-}
-
-.history {
-  background-color: #33ccff;
-  border: white;
-  border-radius: 10px;
-  margin: 5px;
-  font-size: 30px;
-  text-align: center;
-  font-family: impact;
-}
-
-.settings {
-  background-color: #33ccff;
-  border: white;
-  border-radius: 10px;
-  margin: 5px;
-  font-size: 30px;
-  text-align: center;
-  font-family: impact;
-} */
-
 .wrapper {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 2fr;
@@ -113,12 +53,11 @@ table#historyTable {
   width:70%;
   margin-left:15%;
   margin-right:15%;
-  color: #ffffff;
+  color: black;
   font-size: 30px;
   font-family: tahoma;
   text-align: center;
   margin-top: 10px;
   background-color: #81c1fc;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-tr:hover {background-color: #000099;}
+tr:hover {background-color: #000099; color: white;}
