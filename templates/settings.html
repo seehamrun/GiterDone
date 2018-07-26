@@ -6,7 +6,7 @@
   </head>
 
   <body>
-    <script src="/static/script.js"></script>
+    <script src="/static/settings.js"></script>
     <h1 id="settings_header">Settings</h1>
     <ul class="tabBar">
       <li><a href="/" id="home">Home</a></li>
@@ -22,18 +22,18 @@
       <div>Weight: <input type='text' name="weight" value='{{userWeight}}'></div>
       <div>Water Goal: <input type='text' name="totalWater" value='{{userWaterGoal}}'></div>
       <div>Number of Reminder Times: <select id="reminder"name = "incWater" onchange="showReminderTimes(this.value)">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
+          <option value="1" {% if numberReminderTimes == 1 %}selected="selected"{% endif %}>1</option>
+          <option value="2" {% if numberReminderTimes == 2 %}selected="selected"{% endif %}>2</option>
+          <option value="3" {% if numberReminderTimes == 3 %}selected="selected"{% endif %}>3</option>
+          <option value="4" {% if numberReminderTimes == 4 %}selected="selected"{% endif %}>4</option>
+          <option value="5" {% if numberReminderTimes == 5 %}selected="selected"{% endif %}>5</option>
+          <option value="6" {% if numberReminderTimes == 6 %}selected="selected"{% endif %}>6</option>
+          <option value="7" {% if numberReminderTimes == 7 %}selected="selected"{% endif %}>7</option>
+          <option value="8" {% if numberReminderTimes == 8 %}selected="selected"{% endif %}>8</option>
+          <option value="9" {% if numberReminderTimes == 9 %}selected="selected"{% endif %}>9</option>
+          <option value="10" {% if numberReminderTimes == 10 %}selected="selected"{% endif %}>10</option>
+          <option value="11" {% if numberReminderTimes == 11 %}selected="selected"{% endif %}>11</option>
+          <option value="12" {% if numberReminderTimes == 12 %}selected="selected"{% endif %}>12</option>
       </select>
       </div>
       <div id="reminderTimes">

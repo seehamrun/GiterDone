@@ -1,8 +1,7 @@
 <html>
 
   <head>
-
-
+      <title>Schedule</title>
       <link rel="stylesheet" href="/static/schedule.css">
       <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src = "/static/api.js"></script>
@@ -29,7 +28,10 @@
           {% for i in range(0, amtWater) %}
             <input type='checkbox' name="{{values[i]['valueText']}}" value="{{ounces}}"{% if values[i]['isChecked'] %}checked{% endif %}><br>I drank {{ounces}} oz by {{x[i]}}<br>
           {% endfor %}
+
+          {% if user_exists %}
           <input type="submit" id="yes" value="Update" method="post">
+          {% endif %}
         </form>
       </div>
       <div class="weather">
@@ -38,9 +40,9 @@
         <div id="condition"></div>
         <div id="pic"></div>
         <div>
-          <h2>Did you exercise today?</h2>
-            <button id="myBtn" onclick="javascript:alert('We recommend you drink additional water.')">Yes</button>
-
+          <h1 id="activity">Your Activity: </h1>
+          <h2 id="exercise">Did you exercise today?</h2>
+            <button id="myBtn" onclick="javascript:alert('Recommendation: Add 16 additional ounces of water to your goal for every hour you exercise.')">Yes</button>
       </div>
     </div>
   </body>

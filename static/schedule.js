@@ -67,6 +67,7 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
   });
 
 
+
   window.addEventListener('load', () => {
     document.querySelector('#submit').addEventListener("click", submitClick)
     document.querySelector("#date").innerHTML = mm + '/' + dd + '/' + yyyy;
