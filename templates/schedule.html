@@ -29,7 +29,7 @@
           {% for i in range(0, amtWater) %}
             <input type='checkbox' name="{{values[i]['valueText']}}" value="{{ounces}}"{% if values[i]['isChecked'] %}checked{% endif %}><br>I drank {{ounces}} oz by {{x[i]}}<br>
           {% endfor %}
-          <input type="submit" id="submit" value="Update" method="post">
+          <input type="submit" id="yes" value="Update" method="post">
         </form>
       </div>
       <div class="weather">
@@ -37,6 +37,10 @@
         <div id="temp"></div>
         <div id="condition"></div>
         <div id="pic"></div>
+        <div>
+          <h2>Did you exercise today?</h2>
+            <button id="myBtn" onclick="javascript:alert('We recommend you drink additional water.')">Yes</button>
+
       </div>
     </div>
   </body>

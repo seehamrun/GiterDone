@@ -58,6 +58,15 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
 
   // document.write(today);
 
+  var input = document.getElementById("myInput");
+  input.addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+          document.getElementById("myBtn").click();
+      }
+  });
+
+
   window.addEventListener('load', () => {
     document.querySelector('#submit').addEventListener("click", submitClick)
     document.querySelector("#date").innerHTML = mm + '/' + dd + '/' + yyyy;
