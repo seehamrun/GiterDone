@@ -10,6 +10,7 @@ from google.appengine.api import urlfetch
 
 
 class WaterDatabase(ndb.Model):
+    user = ndb.StringProperty()
     name = ndb.StringProperty()
     totalWater = ndb.IntegerProperty()
     age = ndb.IntegerProperty()
@@ -39,23 +40,30 @@ class IndexHandler(webapp2.RequestHandler):
 
 class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
-        results = WaterDatabase.query().fetch()
+        currentUser = users.get_current_user().nickname()
+        results = WaterDatabase.query(WaterDatabase.user == currentUser).fetch()
         if (len(results) > 0):
             totalWater = results[0].totalWater
             amtWater = results[0].incWater
             times = results[0].times
             ounces = totalWater / amtWater
+            totalSessions = results[0].currentAmt / ounces
         else:
             totalWater = 0
             amtWater = 0
             times = []
             ounces = totalWater / (amtWater + 1)
-        userTemp = self.request.get("temp")
-        logging.info("This is user temp")
-        logging.info(userTemp)
+            totalSessions = 0
+        # userTemp = self.request.get("temp")
+        # logging.info("This is user temp")
+        # logging.info(userTemp)
         list = []
         for i in range(0, amtWater):
-            list.append("value" + str(i + 1))
+            dict = {
+            "valueText" : "value" + str(i + 1),
+            "isChecked" : i < totalSessions
+            }
+            list.append(dict)
 
         template = jinja_env.get_template('templates/schedule.html')
         value = {
@@ -65,15 +73,16 @@ class ScheduleHandler(webapp2.RequestHandler):
             "x" : times,
 
         }
-
-        if (userTemp>80) :
-            logging.info("its hot")
-            print("It is hot.")
+        logging.info(value)
+        # if (userTemp>80) :
+        #     logging.info("its hot")
+        #     print("It is hot.")
         return self.response.write(template.render(value))
 
     def post(self):
         #logging.info(self.request.get("value2"))
-        results = WaterDatabase.query().fetch()
+        currentUser = users.get_current_user().nickname()
+        results = WaterDatabase.query(WaterDatabase.user == currentUser).fetch()
         if (len(results) > 0):
             totalWater = results[0].totalWater
             amtWater = results[0].incWater
@@ -82,13 +91,17 @@ class ScheduleHandler(webapp2.RequestHandler):
             totalWater = 0
             amtWater = 0
             ounces = totalWater / (amtWater + 1)
-        currentAmt = 0
 
-        for i in range(1, amtWater):
-            if(self.request.get("value" + str(i)) == ounces):
+        currentAmt = 0
+        logging.info(self.request.POST)
+        for i in range(1, amtWater + 1):
+            if(int(self.request.get("value" + str(i), 0)) == ounces):
                 currentAmt = currentAmt + ounces
-        newentry = WaterDatabase(currentAmt = currentAmt)
-        newentry.put()
+        logging.info(currentAmt)
+        results[0].currentAmt = currentAmt
+        results[0].put()
+        #newentry = WaterDatabase(currentAmt = currentAmt)
+        #newentry.put()
         self.redirect('/history')
 
 
@@ -167,6 +180,7 @@ class SettingsHandler(webapp2.RequestHandler):
         return self.response.write(template.render(userInput))
 
     def post(self):
+        currentUser = users.get_current_user().nickname()
         #  1. get all the things from self.request.get()
         name = self.request.get('name')
         age = int(self.request.get('age'))
@@ -179,7 +193,7 @@ class SettingsHandler(webapp2.RequestHandler):
         for i in range(incWater):
             times.append(self.request.get("reminderTime" + str(i+1)))
         # make a new WaterDatabase using the things from 1
-        newentry = WaterDatabase(name=name, age=int(age), height=height, weight=weight, totalWater=totalWater, incWater=incWater, times = times)
+        newentry = WaterDatabase(user = currentUser, name=name, age=int(age), height=height, weight=weight, totalWater=totalWater, incWater=incWater, times = times)
 
         # put that info in the db
         newentry.put()
