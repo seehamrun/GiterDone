@@ -51,6 +51,8 @@ body {
   border: 15px solid #d6e0f5;
   padding: 10px;
   outline: 10px solid #ffffff;
+  background-image: url(http://www.chrisnuzzaco.com/couch/uploads/image/gallery/water_wave_white_background.jpg);
+  background-size: cover;
 }
 
 /* #home {
@@ -125,6 +127,13 @@ body {
   grid-template-rows: 2fr
 }
 
+.titles {
+  font-size: 30px;
+  font-family: tahoma;
+  color: #81c1fc;
+  text-shadow: 3px 3px #d6e0f5;
+}
+
 .weather {
   text-align: center;
 }
@@ -146,7 +155,7 @@ body {
 }
 
 #checkboxes {
-  font-size: 20px;
+  font-size: 25px;
   font-family: tahoma;
   color: #000099;
   margin-left: 20px;
