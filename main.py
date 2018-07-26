@@ -81,6 +81,7 @@ class ScheduleHandler(webapp2.RequestHandler):
             "amtWater" : amtWater,
             "ounces" : ounces,
             "x" : times,
+            "user_exists" : len(results)>0
 
         }
         logging.info(value)
