@@ -3,12 +3,13 @@
   <head>
     <title>Home</title>
     <link rel="stylesheet" href="/static/home.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body>
     <script src="/static/script.js"></script>
     <h1 id='app_name'>Water Website</h1>
-    <ul>
+    <ul class="tabBar">
       <li><a href="/" id="home">Home</a></li>
       <li><a href="/schedule" id="schedule">Schedule</a></li>
       <li><a href="/history" id="history">History</a></li>
@@ -33,10 +34,22 @@
     <div id="background">
       <div class="container">
         <div id="waterpic">
+          <div class="glass">
+              <div class="water" style="height: 0%"></div>
+          </div>
           <!-- <img src="https://cdn.instructables.com/FU2/Y18R/IDM04U7M/FU2Y18RIDM04U7M.LARGE.jpg"/> -->
         </div>
+        <div id="measurements">
+          <ul class="measureList">
+            <li class="percent"> - 100%</li>
+            <li class="percent"> - 75%</li>
+            <li class="percent"> - 50%</li>
+            <li class="percent"> - 25%</li>
+            <li class="percent"> - 0%</li>
+          </ul>
+        </div>
         <div>
-          <div id="water">
+          <div id="waterInfo">
             <p>Your goal is % cups of water.</p>
             <p>You have drank % cups of water.</p>
             <p>You need % more cups of water to reach your goal.</p>

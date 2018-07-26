@@ -8,3 +8,10 @@ function showReminderTimes(num){
     children[i].style.visibility = "visible";
   }
 }
+
+
+$(function(){
+    $('.water').animate({
+        height: "100%"
+    }, 2000)
+})

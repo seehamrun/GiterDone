@@ -42,6 +42,8 @@ li a:hover {
 }
 
 body {
+  background-image: url();
+  background-size: cover;
   border: 15px solid #d6e0f5;
   padding: 10px;
   outline: 10px solid #ffffff;
@@ -119,10 +121,10 @@ table#historyTable {
   margin-right:15%;
   color: #ffffff;
   font-size: 30px;
-  font-family: impact;
+  font-family: tahoma;
   text-align: center;
   margin-top: 10px;
-  background-color: #cc99ff;
+  background-color: #81c1fc;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-tr:hover {background-color: #ccf5ff;}
+tr:hover {background-color: #000099;}
