@@ -55,10 +55,11 @@ fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weather
   }
 
   today = mm + '/' + dd + '/' + yyyy;
-  document.querySelector("#date").innerHTML = mm + '/' + dd + '/' + yyyy;
+
   // document.write(today);
 
   window.addEventListener('load', () => {
     document.querySelector('#submit').addEventListener("click", submitClick)
+    document.querySelector("#date").innerHTML = mm + '/' + dd + '/' + yyyy;
 
   });

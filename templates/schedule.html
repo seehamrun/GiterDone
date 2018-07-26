@@ -2,11 +2,12 @@
 
   <head>
 
-      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-      <link rel="stylesheet" href="/static/schedule.css"></link>
+
+      <link rel="stylesheet" href="/static/schedule.css">
       <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src = "/static/api.js"></script>
       <script src = "/static/schedule.js"></script>
+      <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 
   </head>
 
@@ -28,7 +29,7 @@
           {% for i in range(0, amtWater) %}
             <input type='checkbox' name="{{values[i]}}" value="{{ounces}}"><br>I drank {{ounces}} oz by {{x[i]}}<br>
           {% endfor %}
-          <input type="submit" id="submit" value="Update">
+          <input type="submit" id="submit" value="Update" method="post">
         </form>
       </div>
       <div class="weather">

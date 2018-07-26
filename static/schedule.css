@@ -40,7 +40,7 @@ body {
   border: 15px solid #d6e0f5;
   padding: 10px;
   outline: 10px solid #ffffff;
-  background-image: url(http://www.chrisnuzzaco.com/couch/uploads/image/gallery/water_wave_white_background.jpg);
+  background-image: url(/static/water_wave_white_background.jpg);
   background-size: cover;
 }
 
@@ -62,7 +62,7 @@ body {
   margin-top: 15px;
   background-color: rgba(255, 255, 255, 0.75);
   border: 1px solid gray;
-  margin-bottom: 70px;
+  margin-bottom: auto;
   margin-right: 30px;
 }
 
@@ -88,7 +88,8 @@ body {
   color: #000099;
   margin-left: 30px;
   background-color: rgba(255, 255, 255, 0.75);
-  border: 1px solid gray;  text-align: center;
+  border: 1px solid gray;
+  text-align: center;
   margin-right: 250px;
   margin-top: 15px;
   margin-bottom: auto;
