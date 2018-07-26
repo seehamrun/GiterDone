@@ -94,3 +94,10 @@ body {
   margin-top: 15px;
   margin-bottom: auto;
 }
+
+#exercise {
+  font-size: 20px;
+  font-family: tahoma;
+  color: #81c1fc;
+  text-shadow: 3px 3px #d6e0f5;
+}
