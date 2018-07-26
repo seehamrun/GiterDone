@@ -57,19 +57,27 @@ class ScheduleHandler(webapp2.RequestHandler):
             "amtWater" : amtWater,
             "ounces" : ounces,
             "x" : times
+            "values" : values 
         }
 
         if (userTemp>80) :
             logging.info("its hot")
             print("It is hot.")
         return self.response.write(template.render(value))
+    def post(self):
+        logging.info(self.request.get("value2"))
+        self.redirect('/history')
 
 
 
 class HistoryHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template('templates/history.html')
-        return self.response.write(template.render())
+        results = WaterDatabase.query().fetch()
+        if(len(results) > 0):
+            totalWater = results[0].usertotalWater
+            amtWater = results[0].incWater
+            ounces = totalWater / amtWater
+
 
 
 class AboutUsHandler(webapp2.RequestHandler):
@@ -147,7 +155,7 @@ class AddWater(webapp2.RequestHandler):
     def post(self):
         requestUrl = self.request.get('url')
         logging.info('server saw a request to add %s to amount of water' % (requestUrl))
-        waterDatabse = WaterDatabase(url=requestUrl)
+        waterDatabase = WaterDatabase(url=requestUrl)
         waterDatabase.put()
 
 
