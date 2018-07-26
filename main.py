@@ -14,7 +14,7 @@ class WaterDatabase(ndb.Model):
     totalWater = ndb.IntegerProperty()
     age = ndb.IntegerProperty()
     date = ndb.IntegerProperty()
-    height = ndb.IntegerProperty()
+    height = ndb.StringProperty()
     incWater = ndb.IntegerProperty()
     weight = ndb.IntegerProperty()
     times = ndb.StringProperty(repeated=True)
@@ -44,16 +44,22 @@ class ScheduleHandler(webapp2.RequestHandler):
             totalWater = results[0].totalWater
             amtWater = results[0].incWater
             times = results[0].times
+            ounces = totalWater / amtWater
         else:
             totalWater = 0
-            amtWater = 1
+            amtWater = 0
             times = []
+            ounces = totalWater / (amtWater + 1)
         userTemp = self.request.get("temp")
         logging.info("This is user temp")
         logging.info(userTemp)
-        ounces = totalWater / amtWater
+        list = []
+        for i in range(0, amtWater):
+            list.append("value" + str(i + 1))
+
         template = jinja_env.get_template('templates/schedule.html')
         value = {
+            "values" : list,
             "amtWater" : amtWater,
             "ounces" : ounces,
             "x" : times
@@ -64,12 +70,33 @@ class ScheduleHandler(webapp2.RequestHandler):
             print("It is hot.")
         return self.response.write(template.render(value))
 
+    def post(self):
+        logging.info(self.request.get("value2"))
+        self.redirect('/history')
+
+
 
 
 class HistoryHandler(webapp2.RequestHandler):
     def get(self):
+        results = WaterDatabase.query().fetch()
+        if (len(results) > 0):
+            totalWater = results[0].totalWater
+            amtWater = results[0].incWater
+            ounces = totalWater / amtWater
+        else:
+            totalWater = 0
+            amtWater = 0
+            ounces = totalWater / (amtWater + 1)
+        checks = self.request.get('checks')
         template = jinja_env.get_template('templates/history.html')
-        return self.response.write(template.render())
+        value = {
+            "totalWater" : totalWater,
+            "ounces" : ounces
+        }
+        return self.response.write(template.render(value))
+
+
 
 
 class AboutUsHandler(webapp2.RequestHandler):
@@ -126,7 +153,7 @@ class SettingsHandler(webapp2.RequestHandler):
         #  1. get all the things from self.request.get()
         name = self.request.get('name')
         age = int(self.request.get('age'))
-        height = int(self.request.get('height'))
+        height = self.request.get('height')
         weight = int(self.request.get('weight'))
         totalWater = int(self.request.get('totalWater'))
         incWater = int(self.request.get('incWater'))

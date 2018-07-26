@@ -38,7 +38,7 @@
         <h5>Date: </h5>
         <form method="post">
           {% for i in range(0, amtWater) %}
-            <input type='checkbox'><br>I drank {{ounces}} oz by {{x[i]}}<br>
+            <input type='checkbox' name="{{values[i]}}" value="{{ounces}}"><br>I drank {{ounces}} oz by {{x[i]}}<br>
           {% endfor %}
           <input type="submit" id="submit" value="Update">
         </form>
