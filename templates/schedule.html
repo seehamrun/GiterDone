@@ -1,7 +1,9 @@
 <html>
 
   <head>
-      <link rel="stylesheet" href="static/schedule.css"></link>
+
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+      <link rel="stylesheet" href="/static/schedule.css"></link>
       <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src = "/static/api.js"></script>
       <script src = "/static/schedule.js"></script>
@@ -20,10 +22,11 @@
     <div class="wrapper">
       <div id="checkboxes">
         <h1 class="titles">Your Daily Schedule: </h1>
-        <h5>Date: <h5>
+        <h5>Date: </h5>
+          <p id="date"></p>
         <form method="post">
           {% for i in range(0, amtWater) %}
-            <input type='checkbox' name= "{{values[i]}}" value="{{ounces}}"><br>I drank {{ounces}} oz by {{x[i]}}<br>
+            <input type='checkbox' name="{{values[i]}}" value="{{ounces}}"><br>I drank {{ounces}} oz by {{x[i]}}<br>
           {% endfor %}
           <input type="submit" id="submit" value="Update">
         </form>
