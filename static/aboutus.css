@@ -93,6 +93,16 @@ body {
 }
 
 #nicolepic {
-  height: 180px;
-  width: 180px;
+  height: 200px;
+  width: auto;
+}
+
+#isaacpic {
+  height: 200px;
+  width: auto;
+}
+
+#davidpic {
+  height: 200px;
+  width: auto;
 }
