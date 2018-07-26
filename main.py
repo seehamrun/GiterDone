@@ -70,9 +70,6 @@ class ScheduleHandler(webapp2.RequestHandler):
             logging.info("its hot")
             print("It is hot.")
         return self.response.write(template.render(value))
-    def post(self):
-        logging.info(self.request.get("value2"))
-        self.redirect('/history')
 
     def post(self):
         #logging.info(self.request.get("value2"))
@@ -186,7 +183,7 @@ class SettingsHandler(webapp2.RequestHandler):
 
         # put that info in the db
         newentry.put()
-        self.redirect('/history')
+        self.redirect('/schedule')
 
 
 
