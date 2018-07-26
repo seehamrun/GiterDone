@@ -63,7 +63,7 @@ class ScheduleHandler(webapp2.RequestHandler):
             "amtWater" : amtWater,
             "ounces" : ounces,
             "x" : times,
-            "values" : values
+            #"values" : values
         }
 
         if (userTemp>80) :
