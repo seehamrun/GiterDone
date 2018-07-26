@@ -117,6 +117,8 @@ body {
   border: 15px solid #d6e0f5;
   padding: 10px;
   outline: 10px solid #ffffff;
+  background-image: url(http://www.chrisnuzzaco.com/couch/uploads/image/gallery/water_wave_white_background.jpg);
+  background-size: cover;
 }
 
 #reminderTimes {
