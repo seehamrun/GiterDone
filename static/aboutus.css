@@ -60,7 +60,31 @@ body {
 }
 
 #sydney {
-  background-color: #ffff;
+  background-color: rgba(204, 239, 255, 0.5);
+  margin: 20px;
+  border: 10px solid #000099;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+#nicole {
+  background-color: rgba(204, 239, 255, 0.5);
+  margin: 20px;
+  border: 10px solid #000099;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+#david {
+  background-color: rgba(204, 239, 255, 0.5);
+  margin: 20px;
+  border: 10px solid #000099;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+#isaac {
+  background-color: rgba(204, 239, 255, 0.5);
   margin: 20px;
   border: 10px solid #000099;
   padding: 5px;
