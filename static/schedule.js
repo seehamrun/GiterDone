@@ -1,4 +1,4 @@
-fetch("http://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weatherApi + "&q=60607&format=json&num_of_days=1")
+fetch("https://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weatherApi + "&q=60607&format=json&num_of_days=1")
   .then(function(response){
     response.json().then(function(data){
       console.log(data);
