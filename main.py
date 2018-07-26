@@ -151,47 +151,46 @@ class AboutUsHandler(webapp2.RequestHandler):
 
 class SettingsHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template('templates/settings.html')
-        name = self.request.get('name')
-        age = self.request.get('age')
-        height = self.request.get('height')
-        weight = self.request.get('weight')
-        totalWater = self.request.get('totalWater')
-        numberReminderTimes = self.request.get('numberReminderTimes')
-        reminderTime1 = self.request.get('reminderTime1')
-        reminderTime2 = self.request.get('reminderTime2')
-        reminderTime3 = self.request.get('reminderTime3')
-        reminderTime4 = self.request.get('reminderTime4')
-        reminderTime5 = self.request.get('reminderTime5')
-        reminderTime6 = self.request.get('reminderTime6')
-        reminderTime7 = self.request.get('reminderTime7')
-        reminderTime8 = self.request.get('reminderTime8')
-        reminderTime9 = self.request.get('reminderTime9')
-        reminderTime10 = self.request.get('reminderTime10')
-        reminderTime11 = self.request.get('reminderTime11')
-        reminderTime12 = self.request.get('reminderTime12')
+        currentUser = users.get_current_user().nickname()
+        results = WaterDatabase.query(WaterDatabase.user == currentUser).fetch()
+        if len(results) == 0:
+            data = {
+            "userName": "",
+            "userAge": "",
+            "userHeight": "",
+            "userWeight": "",
+            "userWaterGoal": "",
+            "numberReminderTimes": "",
+            "reminderTime1": "",
+            "reminderTime2": "",
+            "reminderTime3": "",
+            "reminderTime4": "",
+            "reminderTime5": "",
+            "reminderTime6": "",
+            "reminderTime7": "",
+            "reminderTime8": "",
+            "reminderTime9": "",
+            "reminderTime10": "",
+            "reminderTime11": "",
+            "reminderTime12": "",
 
-        userInput = {
-            "userName": name,
-            "userAge": age,
-            "userHeight": height,
-            "userWeight": weight,
-            "usertotalWater": totalWater,
-            "numberReminderTimes": numberReminderTimes,
-            "reminderTime1": reminderTime1,
-            "reminderTime2": reminderTime2,
-            "reminderTime3": reminderTime3,
-            "reminderTime4": reminderTime4,
-            "reminderTime5": reminderTime5,
-            "reminderTime6": reminderTime6,
-            "reminderTime7": reminderTime7,
-            "reminderTime8": reminderTime8,
-            "reminderTime9": reminderTime9,
-            "reminderTime10": reminderTime10,
-            "reminderTime11": reminderTime11,
-            "reminderTime12": reminderTime12,
-        }
-        return self.response.write(template.render(userInput))
+            }
+        else:
+            data = {
+            "userName": results[0].user,
+            "userAge": results[0].age,
+            "userHeight": results[0].height,
+            "userWeight": results[0].weight,
+            "userWaterGoal": results[0].totalWater,
+            "numberReminderTimes":results[0].incWater,
+            }
+            for i in range(12):
+                if len(results[0].times)>i:
+                    data["reminderTime" + str(i + 1)] = results[0].times[i]
+
+        template = jinja_env.get_template('templates/settings.html')
+
+        return self.response.write(template.render(data))
 
     def post(self):
         currentUser = users.get_current_user().nickname()
