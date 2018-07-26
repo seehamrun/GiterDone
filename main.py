@@ -206,10 +206,11 @@ class SettingsHandler(webapp2.RequestHandler):
         for i in range(incWater):
             times.append(self.request.get("reminderTime" + str(i+1)))
         # make a new WaterDatabase using the things from 1
-        newentry = WaterDatabase(user = currentUser, name=name, age=int(age), height=height, weight=weight, totalWater=totalWater, incWater=incWater, times = times)
+        newentry = WaterDatabase(user = currentUser, name=name, age=int(age), height=height, weight=weight, totalWater=totalWater, incWater=incWater, times = times, currentAmt= 0)
 
         # put that info in the db
         newentry.put()
+        time.sleep(1)
         self.redirect('/schedule')
 
 
