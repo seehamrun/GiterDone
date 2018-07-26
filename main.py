@@ -115,15 +115,17 @@ class HistoryHandler(webapp2.RequestHandler):
             totalWater = results[0].totalWater
             amtWater = results[0].incWater
             ounces = totalWater / amtWater
+            currentAmt = results[0].currentAmt
         else:
             totalWater = 0
             amtWater = 0
             ounces = totalWater / (amtWater + 1)
+            currentAmt = 0
         checks = self.request.get('checks')
         template = jinja_env.get_template('templates/history.html')
         value = {
             "totalWater" : totalWater,
-            "ounces" : ounces
+            "currentAmt" : currentAmt
         }
         return self.response.write(template.render(value))
 
