@@ -177,7 +177,7 @@ class SettingsHandler(webapp2.RequestHandler):
             }
         else:
             data = {
-            "userName": results[0].user,
+            "userName": results[0].name,
             "userAge": results[0].age,
             "userHeight": results[0].height,
             "userWeight": results[0].weight,
@@ -194,6 +194,7 @@ class SettingsHandler(webapp2.RequestHandler):
 
     def post(self):
         currentUser = users.get_current_user().nickname()
+        results = WaterDatabase.query(WaterDatabase.user == currentUser).fetch()
         #  1. get all the things from self.request.get()
         name = self.request.get('name')
         age = int(self.request.get('age'))
@@ -206,10 +207,22 @@ class SettingsHandler(webapp2.RequestHandler):
         for i in range(incWater):
             times.append(self.request.get("reminderTime" + str(i+1)))
         # make a new WaterDatabase using the things from 1
-        newentry = WaterDatabase(user = currentUser, name=name, age=int(age), height=height, weight=weight, totalWater=totalWater, incWater=incWater, times = times, currentAmt= 0)
+        if len(results)==0:
+            newentry = WaterDatabase(user = currentUser, name=name, age=int(age), height=height, weight=weight, totalWater=totalWater, incWater=incWater, times = times, currentAmt= 0)
 
-        # put that info in the db
-        newentry.put()
+            # put that info in the db
+            newentry.put()
+        else:
+            results[0].name = name
+            results[0].age = age
+            results[0].height = height
+            results[0].weight = weight
+            results[0].totalWater = totalWater
+            results[0].incWater = incWater
+            results[0].times = times
+            results[0].put()
+
+
         time.sleep(1)
         self.redirect('/schedule')
 
