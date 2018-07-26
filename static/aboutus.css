@@ -86,3 +86,8 @@ body {
   border: 10px solid #d6e0f5;
   padding: 5px;
 }
+
+#nicolepic {
+  height: 100px;
+  width: 100px;
+}
