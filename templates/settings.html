@@ -17,10 +17,10 @@
     </ul>
     <form method="post" id="editUserPreferences">
       <div>Name: <input type='text' name="name" value='{{userName}}'></div>
-      <div>Age: <input type='text' name="age" value='{{userAge}}'></div>
-      <div>Height: <input type='text' name="height" value='{{userHeight}}'></div>
-      <div>Weight: <input type='text' name="weight" value='{{userWeight}}'></div>
-      <div>Water Goal: <input type='text' name="totalWater" value='{{userWaterGoal}}'></div>
+      <div>Age: <input type='text' name="age" value='{{userAge}}' placeholder="in years"></div>
+      <div>Height: <input type='text' name="height" value='{{userHeight}}' placeholder="in feet"></div>
+      <div>Weight: <input type='text' name="weight" value='{{userWeight}}' placeholder="in pounds"></div>
+      <div>Water Goal: <input type='text' name="totalWater" value='{{userWaterGoal}}' placeholder="in ounces"></div>
       <div>Number of Reminder Times: <select id="reminder"name = "incWater" onchange="showReminderTimes(this.value)">
           <option value="1" {% if numberReminderTimes == 1 %}selected="selected"{% endif %}>1</option>
           <option value="2" {% if numberReminderTimes == 2 %}selected="selected"{% endif %}>2</option>
