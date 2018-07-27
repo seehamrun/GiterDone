@@ -55,9 +55,8 @@ fetch("https://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weathe
       mm = '0'+mm
   }
 
-  today = mm + '/' + dd + '/' + yyyy;
-
-  // document.write(today);
+  date = mm + '/' + dd + '/' + yyyy;
+  // document.write(date);
 
   var input = document.getElementById("myInput");
   input.addEventListener("keyup", function(event) {

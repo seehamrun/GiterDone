@@ -23,7 +23,7 @@
       <div id="checkboxes">
         <h1 class="titles">Your Daily Schedule: </h1>
         <h5>Date: </h5>
-          <p id="date"></p>
+          <p id="date"> 7/27/18</p>
         <form method="post">
           {% for i in range(0, amtWater) %}
             <input type='checkbox' name="{{values[i]['valueText']}}" value="{{ounces}}"{% if values[i]['isChecked'] %}checked{% endif %}><br>I drank {{ounces}} oz by {{x[i]}}<br>
@@ -40,7 +40,7 @@
         <div id="condition"></div>
         <div id="pic"></div>
         <div>
-          <p id="demo">It is hot outside, you should drink more water!</p>
+          <!-- <p id="demo">It is hot outside, you should drink more water!</p> -->
         </div>
         <div>
           <h1 id="activity">Your Activity: </h1>
